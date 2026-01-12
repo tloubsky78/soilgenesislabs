@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soil Genesis DAO | Acoustic Soil Restoration Technology</title>
+  <meta name="description" content="Regenerating Earth's living soil through acoustic innovation, biological soil structure improvement, and trust-first validation." />
+  <style>
+    :root{
+      --bg:#070a12;
+      --card:#0e1426;
+      --muted:#aab2c8;
+      --text:#eef2ff;
+      --accent:#63e6be;
+      --accent2:#60a5fa;
+      --border:rgba(255,255,255,.10);
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 500px at 20% 0%, rgba(96,165,250,.18), transparent 70%),
+        radial-gradient(900px 450px at 85% 10%, rgba(99,230,190,.16), transparent 65%),
+        linear-gradient(180deg, var(--bg), #050610 55%, #04040b);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,.65);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px;}
+    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;color:var(--muted)}
+    .links a{padding:8px 10px;border-radius:12px}
+    .links a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .hero{padding:54px 0 24px;}
+    h1{font-size:40px;line-height:1.12;margin:0 0 12px}
+    .sub{max-width:820px;color:var(--muted);font-size:18px;margin:0 0 18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:14px;border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      font-weight:700;
+      transition:transform .12s ease;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(99,230,190,.20), rgba(96,165,250,.18));
+      border:1px solid rgba(99,230,190,.22);
+    }
+    .btn:hover{transform:translateY(-1px)}
+    section{padding:34px 0}
+    .kicker{color:var(--muted);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+    h2{font-size:26px;margin:8px 0 6px}
+    .lead{color:var(--muted);margin:0 0 18px;max-width:900px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .card{
+      background:rgba(14,20,38,.72);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:18px 18px;
+      box-shadow: var(--shadow);
+    }
+    .stat{display:flex;align-items:flex-start;gap:12px}
+    .badge{
+      flex:0 0 auto;
+      width:42px;height:42px;border-radius:14px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:900;
+      color:var(--text);
+    }
+    .stat h3{margin:0 0 6px;font-size:16px}
+    .stat p{margin:0;color:var(--muted);font-size:14.5px}
+    .span4{grid-column:span 4}
+    .span6{grid-column:span 6}
+    .span8{grid-column:span 8}
+    .span12{grid-column:span 12}
+    @media (max-width: 900px){
+      h1{font-size:34px}
+      .span4,.span6,.span8{grid-column:span 12}
+      .links{gap:8px}
+    }
+    .divider{height:1px;background:var(--border);margin:22px 0}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      color:var(--muted);font-weight:700;font-size:12.5px;
+    }
+    .productTitle{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    ul{margin:10px 0 0 18px;color:var(--muted)}
+    li{margin:4px 0}
+    details{
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:rgba(255,255,255,.04);
+      padding:12px 14px;
+    }
+    details summary{cursor:pointer;font-weight:800}
+    details p, details ul{color:var(--muted)}
+    .foot{
+      padding:26px 0 40px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
+      margin-top:18px;
+      font-size:13.5px;
+    }
+    .small{font-size:12.5px;color:var(--muted)}
+    .warn{
+      border-left:3px solid rgba(96,165,250,.55);
+      padding-left:12px;
+      margin-top:10px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="dot"></span><span>Soil Genesis</span></div>
+    <nav class="links">
+      <a href="#science">Science</a>
+      <a href="#technology">Technology</a>
+      <a href="#impact">Impact</a>
+      <a href="#about">About</a>
+      <a href="#invest">Invest</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Regenerating Earth's Living Soil Through Acoustic Innovation</h1>
+    <p class="sub">
+      Harnessing precisely tuned acoustic stimulation and trust-first biological engineering to restore soil function, strengthen fungal networks, and enable measurable improvements in regenerative agriculture.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#technology">Explore Technology</a>
+      <a class="btn" href="#invest">Partner With Us</a>
+    </div>
+  </section>
+
+  <section id="science">
+    <div class="kicker">Science</div>
+    <h2>The Science Behind Soil Restoration</h2>
+    <p class="lead">Leveraging mechanotransduction and acoustic biology to revitalize soil microbiomes—while keeping claims bounded, testable, and evidence-linked.</p>
+
+    <div class="grid">
+      <div class="card span4">
+        <div class="stat">
+          <div class="badge">8k</div>
+          <div>
+            <h3>Primary Frequency Anchor</h3>
+            <p>We focus on a lab-observed frequency band used in controlled research settings. Field performance is validated separately via pilot protocols.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card span4">
+        <div class="stat">
+          <div class="badge">≈</div>
+          <div>
+            <h3>Evidence-Linked Claims</h3>
+            <p>Quantitative claims are published only when tied to a source, conditions, and measurement method—otherwise framed as hypotheses.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card span4">
+        <div class="stat">
+          <div class="badge">AI</div>
+          <div>
+            <h3>AI-Assisted Optimization</h3>
+            <p>In current deployments, AI supports analysis and configuration models. Closed-loop bio-signal sensing is reserved for the Genesis Toroid research track.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card span12">
+        <h3 style="margin:0 0 8px;">Mechanotransduction</h3>
+        <p class="lead" style="margin:0;">
+          Fungi and associated soil organisms respond to mechanical vibrations through mechanosensory pathways (e.g., cell-wall sensors and stretch-activated ion channels). We design stimulation around these biological response modes rather than chemical forcing.
+        </p>
+        <div class="divider"></div>
+
+        <div class="grid">
+          <div class="card span6" style="box-shadow:none;background:rgba(255,255,255,.03)">
+            <h3 style="margin:0 0 8px;">Mycorrhizal Enhancement</h3>
+            <p class="small">By supporting mycorrhizal networks—the symbiosis between fungi and plant roots—we target improved nutrient access, water handling, and stress resilience (validated by measurement, not assumed).</p>
+          </div>
+          <div class="card span6" style="box-shadow:none;background:rgba(255,255,255,.03)">
+            <h3 style="margin:0 0 8px;">Ecosystem Restoration</h3>
+            <p class="small">Healthy fungal networks underpin soil aggregation and ecosystem function. Our approach aims to help re-establish these networks in degraded soils through non-destructive stimulation.</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <details>
+          <summary>Claims & Evidence (quick view)</summary>
+          <p class="warn"><strong>Policy:</strong> If a number is shown publicly, it must be tied to (1) a source, (2) conditions, and (3) a measurement method.</p>
+          <ul>
+            <li><strong>Acoustic stimulation literature:</strong> Add citations and experimental conditions (organism, SPL/dB, distance, duration).</li>
+            <li><strong>Field claims:</strong> Restrict to measured outcomes with protocol (e.g., penetrometer resistance; infiltration tests), not yield promises.</li>
+            <li><strong>Hypotheses:</strong> Clearly label as hypotheses or research goals.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="technology">
+    <div class="kicker">Technology</div>
+    <h2>Soil Genesis Product Platform</h2>
+    <p class="lead">A portfolio designed for near-term adoption and long-term capability: measurable biological infrastructure (SoilBridge Deep™), field-ready acoustic stimulation (Genesis Column), and a research track for bidirectional sensing (Genesis Toroid).</p>
+
+    <div class="grid">
+      <div class="card span12">
+        <div class="productTitle">
+          <div>
+            <div class="pill">Execution-ready · Claims frozen</div>
+            <h3 style="margin:8px 0 0;">SoilBridge Deep™</h3>
+            <p class="small" style="margin:6px 0 0;">Root-powered decompaction system for no-till agriculture targeting subsoil compaction at 12–18 inches—verified by penetrometer resistance.</p>
+          </div>
+          <a class="btn" href="#invest">Request Information</a>
+        </div>
+
+        <div class="divider"></div>
+        <div class="grid">
+          <div class="card span6" style="box-shadow:none;background:rgba(255,255,255,.03)">
+            <h4 style="margin:0 0 8px;">Primary Outcome (Farmer-verifiable)</h4>
+            <p class="small">20–30% reduction in penetrometer resistance measured at 12–18&quot; depth (benchmark: &gt;300 psi → &lt;300 psi), when agronomic conditions are suitable.</p>
+          </div>
+          <div class="card span6" style="box-shadow:none;background:rgba(255,255,255,.03)">
+            <h4 style="margin:0 0 8px;">What It Does <em>Not</em> Claim</h4>
+            <p class="small">No pest/disease control claims, no guaranteed yield claims, no “chemical loosening” claims. Structure-only, measurement-first.</p>
+          </div>
+        </div>
+
+        <ul>
+          <li><strong>Mechanism:</strong> Deep-rooting cover crops create vertical biopores that persist after winter-kill.</li>
+          <li><strong>Bounded biology:</strong> Microbial seed coating supports root–soil interaction and channel stability (no overclaims).</li>
+          <li><strong>Year 1 SKU:</strong> Core Seed Blend (15–20 lbs/acre; seasonal shelf life).</li>
+          <li><strong>Year 2 option:</strong> Residue Accelerator enhancer (optional; not required for core performance).</li>
+        </ul>
+      </div>
+
+      <div class="card span12">
+        <div class="productTitle">
+          <div>
+            <div class="pill">Field-ready · Sensorless deployment</div>
+            <h3 style="margin:8px 0 0;">Genesis Column</h3>
+            <p class="small" style="margin:6px 0 0;">Acoustic soil restoration system designed for durable, scalable field use—focused on consistent stimulation profiles and pilot validation.</p>
+          </div>
+          <a class="btn" href="#invest">Request Information</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grid">
+          <div class="card span6" style="box-shadow:none;background:rgba(255,255,255,.03)">
+            <h4 style="margin:0 0 8px;">Deployment Philosophy</h4>
+            <p class="small">Simplified and reliable: the Column prioritizes repeatable output and field robustness. Adaptive closed-loop sensing is not required for core performance.</p>
+          </div>
+          <div class="card span6" style="box-shadow:none;background:rgba(255,255,255,.03)">
+            <h4 style="margin:0 0 8px;">Cost & Manufacturing Discipline</h4>
+            <p class="small">We track BOM and manufacturability explicitly. Cost and reliability targets are published with assumptions and test method references (where available).</p>
+          </div>
+        </div>
+
+        <ul>
+          <li><strong>Primary Frequency:</strong> 8 kHz anchor (lab literature); field parameters validated via pilots.</li>
+          <li><strong>Technology:</strong> Fixed stimulation profiles; AI supports analysis/configuration models.</li>
+          <li><strong>Design Philosophy:</strong> Simplified, durable, field-ready.</li>
+          <li><strong>Installation:</strong> Designed for rapid farmer setup (time-to-install depends on mounting/power configuration).</li>
+        </ul>
+
+        <div class="divider"></div>
+        <h4 style="margin:0 0 8px;">Product Evolution</h4>
+        <p class="small" style="margin:0 0 10px;">We iterate toward lower BOM and higher robustness while preserving the validation spine:</p>
+        <ul>
+          <li><strong>Gen 1:</strong> Research-grade system with comprehensive sensor array (high BOM)</li>
+          <li><strong>Gen 2:</strong> Hybrid calibration model (reduced BOM; maintains calibration capability)</li>
+          <li><strong>Gen 3:</strong> Simplified design emphasizing repeatable stimulation (sensorless field deployment)</li>
+        </ul>
+      </div>
+
+      <div class="card span12">
+        <div class="productTitle">
+          <div>
+            <div class="pill">Research track · Bidirectional sensing</div>
+            <h3 style="margin:8px 0 0;">Genesis Toroid</h3>
+            <p class="small" style="margin:6px 0 0;">R&amp;D platform for capturing low-amplitude bio-signals and enabling adaptive response in soil systems. This is explicitly experimental and phased separately from field-ready products.</p>
+          </div>
+          <span class="pill">TRL: research</span>
+        </div>
+
+        <ul>
+          <li><strong>Purpose:</strong> Explore sensing + response loops with rigor (instrumentation realities acknowledged).</li>
+          <li><strong>Output:</strong> Research learnings and validated sensing methods that may later inform future product generations.</li>
+          <li><strong>Policy:</strong> No field performance claims until validated by controlled protocols.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact">
+    <div class="kicker">Impact</div>
+    <h2>Environmental Impact</h2>
+    <p class="lead">Transforming agriculture through soil regeneration—by prioritizing measurable soil function improvements and de-risked adoption pathways.</p>
+
+    <div class="grid">
+      <div class="card span4">
+        <div class="stat">
+          <div class="badge">⟂</div>
+          <div>
+            <h3>Compaction Relief</h3>
+            <p>Measured via penetrometer resistance (SoilBridge Deep™) rather than assumed yield outcomes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card span4">
+        <div class="stat">
+          <div class="badge">💧</div>
+          <div>
+            <h3>Water Handling</h3>
+            <p>Improved infiltration pathways and drought resilience are evaluated through field tests and farmer measurements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card span4">
+        <div class="stat">
+          <div class="badge">🌱</div>
+          <div>
+            <h3>Soil Biology</h3>
+            <p>Support for fungal network function is pursued via mechanotransduction-informed stimulation and validation protocols.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card span12">
+        <p class="small" style="margin:0;">
+          We avoid universal promises. Outcomes vary by soil type, moisture, residue load, management history, and weather. Our approach is to publish what can be measured, and invite farmers to verify results with accessible tools.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="kicker">About</div>
+    <h2>About Soil Genesis DAO</h2>
+    <p class="lead">A Wyoming-registered decentralized autonomous organization building trust-first soil technologies at the intersection of biology, acoustics, and practical engineering.</p>
+
+    <div class="grid">
+      <div class="card span8">
+        <h3 style="margin:0 0 10px;">Our Mission</h3>
+        <p class="small" style="margin:0 0 10px;">
+          Soil Genesis DAO LLC develops products that use precisely tuned acoustic and biological mechanisms to strengthen soil structure and microbial networks—while maintaining scientific discipline, manufacturability, and farmer-verifiable validation.
+        </p>
+        <p class="small" style="margin:0;">
+          We aim to regenerate degraded ecosystems, improve agricultural productivity sustainably, and contribute to resilient food systems. Where we discuss climate co-benefits, we treat them as measured outcomes (not assumptions).
+        </p>
+      </div>
+      <div class="card span4">
+        <h3 style="margin:0 0 10px;">Why Soil Genesis</h3>
+        <ol style="margin:0;color:var(--muted);padding-left:18px">
+          <li><strong>Scientific Foundation</strong><br/>Peer-reviewed grounding + bounded claims</li>
+          <li><strong>Practical Innovation</strong><br/>Field-ready engineering and BOM discipline</li>
+          <li><strong>Transparent Governance</strong><br/>DAO posture with verifiable artifacts</li>
+          <li><strong>Market Opportunity</strong><br/>Massive need for soil restoration solutions</li>
+        </ol>
+      </div>
+      <div class="card span12">
+        <p class="small" style="margin:0;">
+          <strong>Jurisdiction:</strong> Wyoming, United States | <strong>Type:</strong> Decentralized Autonomous Organization LLC
+        </p>
+        <p class="small" style="margin:8px 0 0;">
+          <strong>Smart contract identifier (for filings / diligence):</strong>
+          <span style="opacity:.9">[ADD EXPLORER LINK + CONTRACT ID HERE]</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="invest">
+    <div class="kicker">Invest</div>
+    <h2>Join the Soil Restoration Revolution</h2>
+    <p class="lead">We’re seeking strategic partners, investors, and collaborators aligned with measurable soil regeneration and responsible innovation.</p>
+
+    <div class="cta">
+      <a class="btn primary" href="mailto:info@soilgenesis.org?subject=Soil%20Genesis%20-%20Request%20Investment%20Materials">Request Investment Materials</a>
+      <a class="btn" href="mailto:info@soilgenesis.org?subject=Soil%20Genesis%20-%20Explore%20Partnership">Explore Partnership</a>
+      <a class="btn" href="mailto:info@soilgenesis.org?subject=Soil%20Genesis%20-%20General%20Inquiry">General Inquiries</a>
+    </div>
+
+    <p class="small" style="margin-top:14px;">Early-stage funding opportunity | SoilBridge Deep™ execution-ready | Genesis Column pilot-ready | Toroid research track</p>
+  </section>
+
+  <footer class="foot">
+    © 2026 Soil Genesis DAO LLC. All rights reserved.<br/>
+    Wyoming-registered Decentralized Autonomous Organization | <a href="mailto:info@soilgenesis.org">info@soilgenesis.org</a>
+  </footer>
+</main>
+</body>
+</html>

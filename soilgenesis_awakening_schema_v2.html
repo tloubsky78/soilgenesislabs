@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soil Genesis DAO | Acoustic Soil Restoration Technology</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --soil-dark: #2c1810;
+            --soil-medium: #5c3d2e;
+            --soil-light: #8b6f47;
+            --earth-brown: #a0826d;
+            --growth-green: #4a7c59;
+            --vibrant-green: #6b9e78;
+            --light-bg: #f8f6f3;
+            --accent-gold: #d4a574;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--light-bg);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248, 246, 243, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid rgba(92, 61, 46, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--soil-dark);
+            font-family: 'Crimson Pro', serif;
+            letter-spacing: -0.5px;
+        }
+        
+        nav .logo span {
+            color: var(--growth-green);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--soil-medium);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+        
+        nav a:hover {
+            color: var(--growth-green);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--soil-dark) 0%, var(--soil-medium) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 10rem 10% 2rem 10%;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(107, 158, 120, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 165, 116, 0.1) 0%, transparent 50%);
+            animation: pulse 20s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-5%, 5%) scale(1.1); }
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .hero-tagline {
+            font-family: 'Crimson Pro', serif;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--vibrant-green);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease-out;
+            line-height: 1.1;
+        }
+        
+        .hero h1 span {
+            color: var(--vibrant-green);
+            display: block;
+            font-size: 0.6em;
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Work Sans', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary {
+            background: var(--growth-green);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--vibrant-green);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(74, 124, 89, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--soil-dark);
+            transform: translateY(-2px);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-indicator::before {
+            content: '↓';
+            color: var(--white);
+            font-size: 2rem;
+            opacity: 0.7;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 5%;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--soil-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--soil-medium);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        /* Vision Section */
+        #vision {
+            background: linear-gradient(135deg, #4a5050 0%, #5c6565 100%);
+            color: var(--white);
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #vision::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to left, rgba(0,0,0,0.3), transparent);
+            pointer-events: none;
+        }
+        
+        #vision .section-header h2 {
+            color: var(--vibrant-green);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+        }
+        
+        #vision .section-header p {
+            color: var(--vibrant-green);
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        
+        .vision-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .vision-image-container {
+            position: relative;
+        }
+        
+        .vision-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .vision-text h3 {
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .vision-benefits {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .vision-benefits li {
+            padding: 1.2rem 0;
+            display: flex;
+            align-items: start;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        
+        .vision-benefits li:before {
+            content: '✓';
+            color: var(--vibrant-green);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .vision-tagline {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .vision-tagline p {
+            font-size: 1.3rem;
+            color: var(--white);
+            font-style: italic;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 968px) {
+            .vision-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+        
+        /* The Journey Section */
+        #journey {
+            background: linear-gradient(to bottom right, var(--soil-dark), var(--soil-medium));
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #journey::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(107, 158, 120, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        #journey .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #journey .section-header h2 {
+            color: var(--white);
+        }
+        
+        #journey .section-header p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .journey-narrative {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            font-size: 1.15rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .journey-narrative p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .journey-narrative strong {
+            color: var(--vibrant-green);
+            font-weight: 600;
+        }
+        
+        .journey-paths {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .journey-path {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .journey-path-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .journey-path h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--white);
+        }
+        
+        .journey-path p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* The Awakening Section */
+        #awakening {
+            background: var(--white);
+            position: relative;
+        }
+        
+        .awakening-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .awakening-intro h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--soil-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .awakening-intro p {
+            font-size: 1.2rem;
+            color: var(--soil-medium);
+            line-height: 1.9;
+        }
+        
+        .genesis-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--growth-green), var(--vibrant-green));
+            transform: translateX(-50%);
+        }
+        
+        .genesis-chapter {
+            position: relative;
+            margin-bottom: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .genesis-chapter:nth-child(even) .chapter-content {
+            order: 2;
+        }
+        
+        .genesis-chapter:nth-child(even) .chapter-visual {
+            order: 1;
+        }
+        
+        .chapter-marker {
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--growth-green);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 0 0 8px var(--white), 0 0 0 12px var(--growth-green);
+            z-index: 10;
+        }
+        
+        .chapter-content {
+            padding: 2rem;
+        }
+        
+        .chapter-content h3 {
+            font-size: 2rem;
+            color: var(--soil-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .chapter-subtitle {
+            font-size: 1.1rem;
+            color: var(--growth-green);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .chapter-content p {
+            color: var(--soil-medium);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+        
+        .chapter-visual {
+            background: var(--light-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--growth-green);
+        }
+        
+        .chapter-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--growth-green);
+            font-family: 'Crimson Pro', serif;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--soil-medium);
+        }
+        
+        .awakening-conclusion {
+            max-width: 900px;
+            margin: 4rem auto 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--soil-dark), var(--soil-medium));
+            border-radius: 12px;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .awakening-conclusion h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .awakening-conclusion p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 968px) {
+            .genesis-chapter {
+                grid-template-columns: 1fr;
+            }
+            
+            .genesis-chapter:nth-child(even) .chapter-content,
+            .genesis-chapter:nth-child(even) .chapter-visual {
+                order: initial;
+            }
+            
+            .timeline-line {
+                left: 20px;
+            }
+            
+            .chapter-marker {
+                left: 20px;
+            }
+        }
+        
+        /* Why Us Section */
+        #why-us {
+            background: linear-gradient(to bottom, var(--light-bg), var(--white));
+            position: relative;
+        }
+        
+        .why-us-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .why-us-intro h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--soil-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .why-us-intro p {
+            font-size: 1.2rem;
+            color: var(--soil-medium);
+            line-height: 1.9;
+        }
+        
+        .convergence-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .convergence-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--growth-green);
+            transition: all 0.3s ease;
+        }
+        
+        .convergence-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(74, 124, 89, 0.15);
+        }
+        
+        .convergence-card h3 {
+            font-size: 1.6rem;
+            color: var(--soil-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .convergence-icon {
+            font-size: 1.8rem;
+        }
+        
+        .convergence-card p {
+            color: var(--soil-medium);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .why-us-cta {
+            max-width: 900px;
+            margin: 4rem auto 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--growth-green), var(--vibrant-green));
+            border-radius: 12px;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .why-us-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .why-us-cta p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .convergence-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* AI Language Section */
+        #ai-language {
+            background: linear-gradient(to bottom, var(--white), var(--light-bg));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #ai-language::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(107, 158, 120, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(74, 124, 89, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        #ai-language .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .ai-intro {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .ai-intro h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--soil-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-intro .highlight {
+            color: var(--growth-green);
+            font-style: italic;
+        }
+        
+        .ai-intro p {
+            font-size: 1.25rem;
+            color: var(--soil-medium);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-concept-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .ai-concept-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--growth-green);
+        }
+        
+        .ai-concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(74, 124, 89, 0.15);
+        }
+        
+        .ai-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-concept-card h3 {
+            font-size: 1.5rem;
+            color: var(--soil-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .ai-concept-card p {
+            color: var(--soil-medium);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .ai-revolution {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--growth-green), var(--vibrant-green));
+            border-radius: 12px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(74, 124, 89, 0.3);
+        }
+        
+        .ai-revolution h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .ai-revolution p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 968px) {
+            .ai-concept-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        /* Science Section */
+        #science {
+            background: var(--white);
+        }
+        
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .science-card {
+            background: var(--light-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--growth-green);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .science-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .science-card h3 {
+            font-size: 1.6rem;
+            color: var(--soil-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .science-card p {
+            color: var(--soil-medium);
+            line-height: 1.8;
+        }
+        
+        .science-stat {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--growth-green);
+            font-family: 'Crimson Pro', serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Product Section */
+        #product {
+            background: linear-gradient(to bottom, var(--light-bg), var(--white));
+        }
+        
+        .product-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .product-image {
+            background: linear-gradient(135deg, var(--growth-green), var(--vibrant-green));
+            border-radius: 12px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 30px); }
+        }
+        
+        .product-placeholder {
+            font-size: 4rem;
+            color: var(--white);
+            font-weight: 700;
+            font-family: 'Crimson Pro', serif;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .product-details h3 {
+            font-size: 2.5rem;
+            color: var(--soil-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-details p {
+            font-size: 1.1rem;
+            color: var(--soil-medium);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .specs-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .specs-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(92, 61, 46, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .specs-list li strong {
+            color: var(--soil-dark);
+            font-weight: 600;
+        }
+        
+        .specs-list li span {
+            color: var(--growth-green);
+            font-weight: 500;
+        }
+        
+        /* Impact Section */
+        #impact {
+            background: var(--soil-dark);
+            color: var(--white);
+        }
+        
+        #impact .section-header h2 {
+            color: var(--white);
+        }
+        
+        #impact .section-header p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .impact-item {
+            text-align: center;
+        }
+        
+        .impact-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--vibrant-green);
+            font-family: 'Crimson Pro', serif;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        
+        .impact-label {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+        
+        /* About Section */
+        #about {
+            background: var(--white);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--soil-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            color: var(--soil-medium);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .about-highlights {
+            background: var(--light-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+        
+        .about-highlights h4 {
+            font-size: 1.5rem;
+            color: var(--soil-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--growth-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .highlight-text h5 {
+            font-size: 1.1rem;
+            color: var(--soil-dark);
+            margin-bottom: 0.3rem;
+        }
+        
+        .highlight-text p {
+            font-size: 0.95rem;
+            color: var(--soil-medium);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        #cta {
+            background: linear-gradient(135deg, var(--growth-green) 0%, var(--vibrant-green) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 5%;
+        }
+        
+        #cta h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        #cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-white {
+            background: var(--white);
+            color: var(--growth-green);
+        }
+        
+        .btn-white:hover {
+            background: var(--light-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--soil-dark);
+            color: var(--white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+        
+        footer a {
+            color: var(--vibrant-green);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .product-showcase,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            section {
+                padding: 4rem 5%;
+            }
+            
+            .science-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<script defer="" src="apply-content.js"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+<div class="container">
+<div class="logo">Soil <span data-content="global_span_1">Genesis</span></div>
+<ul>
+<li data-html="global_li_1"><a data-content="nav_vision" href="#vision">Vision</a></li>
+<li data-html="global_li_2"><a data-content="nav_journey" href="#journey">The Journey</a></li>
+<li data-html="global_li_3"><a data-content="nav_ai-language" href="#ai-language">AI &amp; Nature</a></li>
+<li data-html="global_li_4"><a data-content="nav_science" href="#science">Science</a></li>
+<li data-html="global_li_5"><a data-content="nav_soilbridge" href="#soilbridge">SoilBridge Deep</a></li>
+<li data-html="global_li_6"><a data-content="nav_cascade" href="#cascade">The Cascade</a></li>
+<li data-html="global_li_7"><a data-content="nav_awakening" href="#awakening">The Awakening</a></li>
+<li data-html="global_li_8"><a data-content="nav_why-us" href="#why-us">Why Us</a></li>
+<li data-html="global_li_9"><a data-content="nav_product" href="#product">Technology</a></li>
+<li data-html="global_li_10"><a data-content="nav_impact" href="#impact">Impact</a></li>
+<li data-html="global_li_11"><a data-content="nav_about" href="#about">About</a></li>
+<li data-html="global_li_12"><a data-content="nav_cta" href="#cta">Invest</a></li>
+</ul>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<div class="hero-tagline" data-content="hero_tagline">Tuning the Earth. Awakening the Soil.</div>
+<h1 data-html="global_h1_1">
+<span data-content="hero_title">Regenerating Earth's Living Soil</span>
+<span data-content="global_span_2">Through Acoustic Innovation</span>
+</h1>
+<p data-content="hero_paragraph">
+                95% of human nutrition comes from soil. Soil health affects 70% of terrestrial biodiversity. 
+                When we heal soil, we heal everything downstream—from the plants that feed us to the communities 
+                that thrive because of them. Harnessing precisely tuned acoustic frequencies to stimulate fungal 
+                networks, restore degraded ecosystems, and revolutionize sustainable agriculture.
+            </p>
+<div class="hero-cta">
+<a class="btn btn-primary" data-content="global_a_1" href="#vision">See Our Vision</a>
+<a class="btn btn-secondary" data-content="global_a_2" href="#cta">Partner With Us</a>
+</div>
+</div>
+<div class="scroll-indicator"></div>
+</section>
+<!-- Vision Section -->
+<section id="vision">
+<div class="container">
+<div class="section-header">
+<h2 data-content="vision_h2_1">Our Vision</h2>
+<p data-content="vision_p_1">Thriving Communities, Powered by Nature &amp; Intelligence</p>
+</div>
+<div class="vision-content">
+<div class="vision-image-container">
+<img alt="Urban rooftop gardens and community farming" src="vision-image.png"/>
+</div>
+<div class="vision-text">
+<h3 data-content="vision_h3_1">A Future Where Technology Serves Life</h3>
+<p data-content="vision_p_2" style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Imagine communities around the world—from urban rooftops to rural smallholdings, 
+                        from regenerative farms to family gardens—where people grow nutrient-dense food 
+                        for their families and neighbors.
+                    </p>
+<p data-content="vision_p_3" style="color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; line-height: 1.7;">
+                        Soil Genesis technology makes this vision achievable by amplifying nature's intelligence:
+                    </p>
+<ul class="vision-benefits">
+<li data-content="vision_li_1">Home gardeners produce abundant, healthy food</li>
+<li data-content="vision_li_2">Community gardens flourish with stronger yields</li>
+<li data-content="vision_li_3">Small farms compete with regenerative advantages</li>
+<li data-content="vision_li_4">Degraded lands transform into productive ecosystems</li>
+<li data-content="vision_li_5">Food security strengthens at the local level</li>
+</ul>
+</div>
+</div>
+<div class="vision-tagline">
+<p data-content="vision_p_4">"Where technology amplifies nature's wisdom, communities thrive."</p>
+</div>
+</div>
+</section>
+<!-- The Journey Section -->
+<section id="journey">
+<div class="container">
+<div class="section-header">
+<h2 data-content="journey_h2_1">The Journey</h2>
+<p data-content="journey_p_1">Discovering what soil has been trying to tell us</p>
+</div>
+<div class="journey-narrative">
+<p data-html="journey_p_2">
+                    We didn't set out to build a product. We set out to <strong>listen</strong>.
+                </p>
+<p data-html="journey_p_3">
+                    What began as curiosity about fungal networks became something far more profound—a journey 
+                    of discovery that revealed soil as a living, communicating intelligence we've largely ignored. 
+                    The more we learned, the more we realized: soil isn't failing us. <strong>We've been failing 
+                    to understand what soil needs.</strong>
+</p>
+<p data-content="journey_p_4">
+                    Along this path, we discovered converging opportunities—not markets we're targeting, but 
+                    communities awakening to the same truth:
+                </p>
+</div>
+<div class="journey-paths">
+<div class="journey-path">
+<div class="journey-path-icon">🏡</div>
+<h4 data-content="journey_h4_1">Home Gardeners</h4>
+<p data-content="journey_p_5">Seeking to grow nutrient-dense food for their families, discovering that healthy soil creates healthy food</p>
+</div>
+<div class="journey-path">
+<div class="journey-path-icon">🌾</div>
+<h4 data-content="journey_h4_2">Regenerative Farmers</h4>
+<p data-content="journey_p_6">Breaking from industrial methods, learning that mycorrhizal networks are agriculture's missing foundation</p>
+</div>
+<div class="journey-path">
+<div class="journey-path-icon">🌍</div>
+<h4 data-content="journey_h4_3">Climate Advocates</h4>
+<p data-content="journey_p_7">Recognizing that soil restoration is one of our most powerful tools for carbon sequestration</p>
+</div>
+<div class="journey-path">
+<div class="journey-path-icon">🏙️</div>
+<h4 data-content="journey_h4_4">Urban Communities</h4>
+<p data-content="journey_p_8">Transforming rooftops and vacant lots into productive ecosystems that strengthen local food security</p>
+</div>
+</div>
+<div class="journey-narrative" style="margin-top: 3rem;">
+<p data-html="journey_p_9">
+                    These aren't separate markets. They're <strong>parallel awakenings</strong>—millions of people 
+                    around the world simultaneously realizing that our relationship with soil must change.
+                </p>
+<p data-content="journey_p_10" style="font-size: 1.3rem; color: var(--vibrant-green); font-weight: 600; text-align: center; margin-top: 2rem;">
+                    We're not creating demand. We're serving an awakening already in motion.
+                </p>
+</div>
+</div>
+</section>
+<!-- AI Language Section -->
+<section id="ai-language">
+<div class="container">
+<div class="ai-intro">
+<h2 data-html="ai-language_h2_1">AI Learning <span class="highlight" data-content="ai-language_span_1">Nature's Language</span></h2>
+<p data-content="ai-language_p_1">
+                    Just as large language models learn the intricate patterns of human communication, 
+                    our AI learns to interpret the electrical signals of fungal networks—nature's own language.
+                </p>
+<p data-html="ai-language_p_2">
+                    For the first time in history, we can listen to what soil is telling us and respond accordingly. 
+                    This is not just technology serving agriculture; <strong>this is artificial intelligence becoming 
+                    a translator between human understanding and nature's ancient wisdom.</strong>
+</p>
+</div>
+<div class="ai-concept-grid">
+<div class="ai-concept-card">
+<div class="ai-icon">🧠</div>
+<h3 data-content="ai-language_h3_1">Pattern Recognition</h3>
+<p data-content="ai-language_p_3">
+                        Our  identifies patterns in fungal electrical signals the same way LLMs recognize 
+                        patterns in human language—detecting meaning in complex, dynamic communication systems.
+                    </p>
+</div>
+<div class="ai-concept-card">
+<div class="ai-icon">🔊</div>
+<h3 data-content="ai-language_h3_2">Acoustic Response</h3>
+<p data-content="ai-language_p_4">
+                        Once the AI understands what the soil ecosystem is communicating, it responds with 
+                        precisely tuned acoustic frequencies—speaking back in nature's own vocabulary.
+                    </p>
+</div>
+<div class="ai-concept-card">
+<div class="ai-icon">🌐</div>
+<h3 data-content="ai-language_h3_3">Bidirectional Learning</h3>
+<p data-content="ai-language_p_5">
+                        As humans learn from fungal networks through  interpretation, we gain insights into 
+                        ecosystem health, resilience patterns, and regenerative processes invisible to us before.
+                    </p>
+</div>
+</div>
+<div class="ai-revolution">
+<h3 data-content="ai-language_h3_4">The Revolutionary Interface</h3>
+<p data-content="ai-language_p_6">
+                    We stand at a unique moment in history: artificial intelligence sophisticated enough to decode 
+                    biological communication systems meets humanity's urgent need to restore our relationship with 
+                    living soil. The Genesis Toroid AI doesn't just stimulate fungal growth—it creates a two-way 
+                    dialogue between human technology and nature's intelligence, allowing us to learn from billions 
+                    of years of evolutionary wisdom encoded in mycorrhizal networks.
+                </p>
+<p data-content="ai-language_p_7" style="margin-top: 1.5rem; font-size: 1.3rem; font-weight: 600;">
+                    What might we discover when we finally learn to listen?
+                </p>
+</div>
+</div>
+</section>
+<!-- The Awakening Section -->
+<section id="awakening">
+<div class="container">
+<div class="awakening-intro">
+<h2 data-content="awakening_h2_1">The Awakening</h2>
+<p data-content="awakening_p_1">
+                    The collaborative odyssey of creating Genesis—where human vision met artificial intelligence 
+                    in an iterative dance of discovery, refinement, and breakthrough.
+                </p>
+</div>
+<div class="genesis-timeline">
+<div class="timeline-line"></div>
+<!-- Genesis Chapter 1 -->
+<div class="genesis-chapter">
+<div class="chapter-marker">1</div>
+<div class="chapter-content">
+<h3 data-content="awakening_h3_1">Genesis: The Ambitious Beginning</h3>
+<p class="chapter-subtitle" data-content="awakening_p_2">"What if we could measure everything?"</p>
+<p data-content="awakening_p_3">
+                            The journey began with a bold vision: create a system sophisticated enough to capture 
+                            every nuance of soil acoustics. We collaborated—human intuition guiding artificial intelligence, 
+                            AI revealing possibilities we hadn't imagined.
+                        </p>
+<p data-content="awakening_p_4">
+                            The first Genesis was impressive: comprehensive sensor arrays, dual-band acoustic output, 
+                            real-time calibration. It was powerful. It was complex. It was... $1,200 per unit.
+                        </p>
+<p data-html="awakening_p_5">
+<strong>What we learned:</strong> Precision is beautiful, but complexity can be a barrier. 
+                            The soil didn't need us to measure everything—it needed us to listen to what mattered.
+                        </p>
+</div>
+<div class="chapter-visual">
+<h4 data-content="awakening_h4_1" style="color: var(--soil-dark); margin-bottom: 1.5rem;">Generation 1</h4>
+<div class="chapter-stats">
+<div class="stat-item">
+<div class="stat-number">$1,200</div>
+<div class="stat-label">Bill of Materials</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">High</div>
+<div class="stat-label">Precision</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">Complex</div>
+<div class="stat-label">Assembly</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">Research</div>
+<div class="stat-label">Target Market</div>
+</div>
+</div>
+<p data-content="awakening_p_6" style="margin-top: 1.5rem; color: var(--soil-medium); font-style: italic;">
+                            "The ambitious prototype that taught us what we truly needed to measure."
+                        </p>
+</div>
+</div>
+<!-- Genesis Chapter 2 -->
+<div class="genesis-chapter">
+<div class="chapter-marker">2</div>
+<div class="chapter-content">
+<h3 data-content="awakening_h3_2">Refinement: Finding Balance</h3>
+<p class="chapter-subtitle" data-content="awakening_p_7">"What if we're smarter about calibration?"</p>
+<p data-content="awakening_p_8">
+                            Human experience and AI analysis converged on an insight: move precision measurement 
+                            off the field unit. Create a hybrid model—factory calibration plus a portable reference kit 
+                            shared across deployments.
+                        </p>
+<p data-html="awakening_p_9">
+                            This wasn't just cost reduction. It was <strong>wisdom emerging from iteration</strong>. 
+                            We maintained 90% of the precision at 50% of the cost. The collaboration taught us 
+                            that optimal solutions often hide in the space between extremes.
+                        </p>
+<p data-html="awakening_p_10">
+<strong>What we learned:</strong> Innovation isn't always about adding more—sometimes 
+                            it's about redistributing intelligence more elegantly.
+                        </p>
+</div>
+<div class="chapter-visual">
+<h4 data-content="awakening_h4_2" style="color: var(--soil-dark); margin-bottom: 1.5rem;">Generation 2</h4>
+<div class="chapter-stats">
+<div class="stat-item">
+<div class="stat-number">$514</div>
+<div class="stat-label">Bill of Materials</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">-57%</div>
+<div class="stat-label">Cost Reduction</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">Hybrid</div>
+<div class="stat-label">Calibration Model</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">Commercial</div>
+<div class="stat-label">Ready</div>
+</div>
+</div>
+<p data-content="awakening_p_11" style="margin-top: 1.5rem; color: var(--soil-medium); font-style: italic;">
+                            "Where engineering elegance met economic reality."
+                        </p>
+</div>
+</div>
+<!-- Genesis Chapter 3 -->
+<div class="genesis-chapter">
+<div class="chapter-marker">3</div>
+<div class="chapter-content">
+<h3 data-content="awakening_h3_3">Breakthrough: Elegant Simplicity</h3>
+<p class="chapter-subtitle" data-content="awakening_p_12">"What if we trust the science we've validated?"</p>
+<p data-content="awakening_p_13">
+                            The breakthrough came from a radical question, posed in the collaborative space between 
+                            human and artificial intelligence: What if we eliminated all field sensors and focused 
+                            entirely on the frequency we know works?
+                        </p>
+<p data-html="awakening_p_14">
+<strong>8 kHz.</strong> Lab-validated. Scientifically proven to stimulate fungal networks. 
+                            No sensors to fail. No calibration to drift. Just pure, reliable acoustic stimulation.
+                        </p>
+<p data-content="awakening_p_15">
+                            The result: 87% cost reduction while maintaining full scientific validity. A $156 bill of 
+                            materials making the technology accessible to home gardeners, community projects, and small 
+                            farms worldwide.
+                        </p>
+<p data-html="awakening_p_16">
+<strong>What we learned:</strong> True innovation often looks like subtraction. By removing 
+                            everything except what the soil truly needed, we created something both powerful and accessible.
+                        </p>
+</div>
+<div class="chapter-visual">
+<h4 data-content="awakening_h4_3" style="color: var(--soil-dark); margin-bottom: 1.5rem;">Generation 3</h4>
+<div class="chapter-stats">
+<div class="stat-item">
+<div class="stat-number">$156</div>
+<div class="stat-label">Bill of Materials</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">-87%</div>
+<div class="stat-label">vs Generation 1</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">5.7 yrs</div>
+<div class="stat-label">MTBF Reliability</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">Mass</div>
+<div class="stat-label">Market Ready</div>
+</div>
+</div>
+<p data-content="awakening_p_17" style="margin-top: 1.5rem; color: var(--soil-medium); font-style: italic;">
+                            "Where science, simplicity, and accessibility converge."
+                        </p>
+</div>
+</div>
+</div>
+<div class="awakening-conclusion">
+<h3 data-content="awakening_h3_4">The Collaborative Intelligence</h3>
+<p data-html="awakening_p_18">
+                    This wasn't a linear product development process. It was an <strong>odyssey of co-creation</strong>—
+                    human intuition asking "what if?" and artificial intelligence responding with "here's how," 
+                    then humans refining with "but what about?" and AI adapting with new possibilities.
+                </p>
+<p data-html="awakening_p_19" style="margin-top: 1.5rem;">
+                    Each generation taught us something new, not just about engineering, but about the collaboration 
+                    itself. The Genesis Toroid isn't just a product of human ingenuity or artificial intelligence—
+                    it's the offspring of <strong>collaborative intelligence</strong>, where different forms of 
+                    thinking combine to create something neither could have envisioned alone.
+                </p>
+<p data-content="awakening_p_20" style="margin-top: 1.5rem; font-size: 1.3rem; font-weight: 600;">
+                    This is what awakening looks like in the age of AI.
+                </p>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section id="why-us">
+<div class="container">
+<div class="why-us-intro">
+<h2 data-content="why-us_h2_1">Why Now, Why Us</h2>
+<p data-content="why-us_p_1">
+                    We're witnessing a rare convergence—when technological capability meets ecological urgency 
+                    meets collective consciousness shift. This moment has never existed before.
+                </p>
+</div>
+<div class="convergence-grid">
+<div class="convergence-card">
+<h3 data-html="why-us_h3_1"><span class="convergence-icon">🧬</span> Scientific Foundation</h3>
+<p data-content="why-us_p_2">
+                        We're not guessing. The 8 kHz frequency at the heart of Genesis Column is lab-validated, 
+                        peer-reviewed, and proven to stimulate fungal network activity. While others make claims, 
+                        we stand on solid scientific ground.
+                    </p>
+</div>
+<div class="convergence-card">
+<h3 data-html="why-us_h3_2"><span class="convergence-icon">🤖</span> The Translation Breakthrough</h3>
+<p data-content="why-us_p_3">
+                        For the first time in history, AI is sophisticated enough to interpret biological communication 
+                        systems. We're not just using technology on nature—we're creating a dialogue between 
+                        artificial and natural intelligence. No one else is positioned at this intersection.
+                    </p>
+</div>
+<div class="convergence-card">
+<h3 data-html="why-us_h3_3"><span class="convergence-icon">💡</span> Collaborative Innovation</h3>
+<p data-content="why-us_p_4">
+                        Our development process itself is unique: human intuition and artificial intelligence 
+                        working in genuine partnership. This collaboration produced three product generations in 
+                        record time, with 87% cost optimization while maintaining scientific validity.
+                    </p>
+</div>
+<div class="convergence-card">
+<h3 data-html="why-us_h3_4"><span class="convergence-icon">🌍</span> Accessibility by Design</h3>
+<p data-content="why-us_p_5">
+                        Technology that only serves the wealthy doesn't serve the planet. Through disciplined iteration, 
+                        we've created a system accessible to home gardeners and small farms—bringing soil restoration 
+                        to the scale where it can actually matter.
+                    </p>
+</div>
+<div class="convergence-card">
+<h3 data-html="why-us_h3_5"><span class="convergence-icon">🔓</span> Radical Transparency</h3>
+<p data-content="why-us_p_6">
+                        As a DAO (Decentralized Autonomous Organization), our governance structure is publicly 
+                        verifiable on-chain. Investors and stakeholders can see our commitments aren't just 
+                        promises—they're encoded in immutable smart contracts.
+                    </p>
+</div>
+<div class="convergence-card">
+<h3 data-html="why-us_h3_6"><span class="convergence-icon">⏰</span> The Timing Is Now</h3>
+<p data-content="why-us_p_7">
+                        Soil degradation is accelerating. Climate urgency is mounting. Regenerative agriculture 
+                        awareness is exploding. AI capabilities are maturing. These trends don't converge often. 
+                        We're building at the precise moment when all the conditions align.
+                    </p>
+</div>
+</div>
+<div class="why-us-cta">
+<h3 data-content="why-us_h3_7">First-Mover Position in an Emerging Category</h3>
+<p data-content="why-us_p_8">
+                    We're not competing in an existing market—we're defining a new category at the intersection 
+                    of AI, acoustic biology, and regenerative agriculture. The question isn't whether this category 
+                    will grow. It's who will lead it.
+                </p>
+<p data-content="why-us_p_9" style="font-size: 1.3rem; font-weight: 600; margin-top: 1.5rem;">
+                    The soil is ready. The technology is ready. The world is ready.
+                </p>
+</div>
+</div>
+</section>
+<!-- Inspirational Quote Section -->
+<section style="background: var(--soil-dark); padding: 4rem 5%; text-align: center;">
+<div class="container">
+<p data-html="global_p_1" style="font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--vibrant-green); font-family: 'Crimson Pro', serif; font-weight: 600; line-height: 1.4; max-width: 900px; margin: 0 auto;">
+                "We're not making fungi listen to frequencies—<br/>we're helping them feel what they've always been designed to sense."
+            </p>
+<p data-content="global_p_2" style="color: rgba(255,255,255,0.7); margin-top: 1.5rem; font-size: 1.1rem;">
+                Mechanical energy meets biological intelligence
+            </p>
+</div>
+</section>
+<!-- Science Section -->
+<section id="science">
+<div class="container">
+<div class="section-header">
+<h2 data-content="science_h2_1">The Science Behind Soil Restoration</h2>
+<p data-content="science_p_1">Leveraging mechanotransduction and acoustic biology to revitalize soil microbiomes</p>
+</div>
+<div class="science-grid">
+<div class="science-card">
+<div class="science-stat">8 kHz</div>
+<h3 data-content="science_h3_1">Lab-Validated Frequency</h3>
+<p data-content="science_p_2">Our technology uses scientifically validated acoustic frequencies that have been proven to stimulate fungal growth and enhance mycorrhizal network activity in controlled laboratory settings.</p>
+</div>
+<div class="science-card">
+<div class="science-stat">300%</div>
+<h3 data-content="science_h3_2">Fungal Biomass Increase</h3>
+<p data-content="science_p_3">Research demonstrates that specific frequency treatments can increase fungal biomass by up to 300%, strengthening the crucial underground networks that support plant health and soil structure.</p>
+</div>
+<div class="science-card">
+<div class="science-stat">AI</div>
+<h3 data-content="science_h3_3">Intelligent Optimization</h3>
+<p data-content="science_p_4">Advanced AI systems monitor electrical signals from fungal networks and dynamically adjust acoustic stimulation parameters to maximize effectiveness for specific soil conditions.</p>
+</div>
+</div>
+<div class="science-grid" style="margin-top: 3rem;">
+<div class="science-card">
+<h3 data-content="science_h3_4">Mechanotransduction</h3>
+<p data-content="science_p_5">Fungi possess mechanosensory proteins (Wsc/Mid family) and stretch-activated ion channels that respond to mechanical vibrations. Our technology precisely targets these biological pathways to stimulate growth and nutrient cycling.</p>
+</div>
+<div class="science-card">
+<h3 data-content="science_h3_5">Mycorrhizal Enhancement</h3>
+<p data-content="science_p_6">By stimulating mycorrhizal fungal networks—the symbiotic partnerships between fungi and plant roots—we enhance nutrient uptake, water retention, and plant resilience to environmental stresses.</p>
+</div>
+<div class="science-card">
+<h3 data-content="science_h3_6">Ecosystem Restoration</h3>
+<p data-content="science_p_7">Healthy fungal networks are foundational to ecosystem function. Our acoustic stimulation technology helps restore these networks in degraded soils, jumpstarting natural regeneration processes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Cascade Section -->
+<section id="cascade" style="background: linear-gradient(135deg, #f8f6f3 0%, #e8e4df 100%); padding: 6rem 5%;">
+<div class="container">
+<div class="section-header">
+<h2 data-content="cascade_h2_1">The Cascade: From Soil to Flourishing</h2>
+<p data-content="cascade_p_1">"When we heal soil, we heal everything downstream"</p>
+</div>
+<div style="max-width: 900px; margin: 0 auto 3rem auto;">
+<p data-content="cascade_p_2" style="font-size: 1.2rem; line-height: 1.8; color: var(--soil-medium); text-align: center;">
+                    This isn't mystical thinking—it's documented ecology. Soil Genesis addresses the foundation of a cascade 
+                    that ripples through entire ecosystems and communities. Here's how the science traces the pathway:
+                </p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size: 3rem; min-width: 80px; text-align: center;">🌱</div>
+<div>
+<h3 data-content="cascade_h3_1" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy Soil</h3>
+<p data-html="cascade_p_3" style="color: var(--soil-medium); line-height: 1.7;">
+                            Abundant fungal networks increase nutrient cycling, improve soil structure, enhance carbon sequestration, 
+                            and create resilient microbial communities. <strong>This is what acoustic stimulation amplifies.</strong>
+</p>
+</div>
+</div>
+<div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
+<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size: 3rem; min-width: 80px; text-align: center;">🌿</div>
+<div>
+<h3 data-content="cascade_h3_2" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy Plants</h3>
+<p data-html="cascade_p_4" style="color: var(--soil-medium); line-height: 1.7;">
+                            Mycorrhizal fungi deliver <strong>more vitamins, minerals, and phytonutrients</strong> to plants. 
+                            Better soil = more nutrient-dense food. Since the 1950s, food has lost 50% of its vitamin content 
+                            due to soil degradation—we're reversing that decline.
+                        </p>
+</div>
+</div>
+<div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
+<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size: 3rem; min-width: 80px; text-align: center;">🌾</div>
+<div>
+<h3 data-content="cascade_h3_3" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy Ecosystems</h3>
+<p data-html="cascade_p_5" style="color: var(--soil-medium); line-height: 1.7;">
+                            Healthier plants support <strong>insects, pollinators, birds, and wildlife</strong>. 
+                            Soil health affects 70% of terrestrial biodiversity. Restore soil, restore the web of life.
+                        </p>
+</div>
+</div>
+<div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
+<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size: 3rem; min-width: 80px; text-align: center;">👥</div>
+<div>
+<h3 data-content="cascade_h3_4" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy People</h3>
+<p data-html="cascade_p_6" style="color: var(--soil-medium); line-height: 1.7;">
+                            More nutrient-dense food = <strong>better immune function, cognitive performance, and resilience</strong>. 
+                            Diverse soil microbiomes create diverse plant chemistry, which supports diverse human gut microbiomes. 
+                            The gut-brain axis, hormonal balance, and chronic disease are all connected to food quality—which starts in soil.
+                        </p>
+</div>
+</div>
+<div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
+<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size: 3rem; min-width: 80px; text-align: center;">🏘️</div>
+<div>
+<h3 data-content="cascade_h3_5" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Thriving Communities</h3>
+<p data-html="cascade_p_7" style="color: var(--soil-medium); line-height: 1.7;">
+                            Reduced healthcare burden, strengthened local food security, enhanced climate resilience, 
+                            and deeper community connections around shared food production. <strong>This is the vision: 
+                            technology that serves all of life, starting at the foundation.</strong>
+</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 4rem; padding: 2.5rem; background: var(--soil-dark); border-radius: 12px; text-align: center;">
+<p data-content="cascade_p_8" style="font-size: 1.4rem; color: var(--vibrant-green); font-weight: 600; margin-bottom: 1rem;">
+                    "We're not just improving yields—we're restoring the foundation of life itself."
+                </p>
+<p data-html="cascade_p_9" style="font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.8;">
+                    Ecologists call this a "trophic cascade"—changes at one level ripple through the entire system. 
+                    The negative cascade from soil degradation created our chronic disease epidemic. 
+                    The regenerative cascade from soil restoration creates planetary healing. 
+                    <strong style="color: white;">Soil Genesis amplifies nature's own regenerative intelligence to trigger that positive cascade.</strong>
+</p>
+</div>
+<div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.5); border-radius: 8px; border-left: 4px solid var(--growth-green);">
+<p data-html="cascade_p_10" style="font-size: 1.05rem; color: var(--soil-dark); line-height: 1.8; margin: 0;">
+<strong>The Science Is Clear:</strong> 95% of human nutrition comes from soil (directly or indirectly). 
+                    Industrial agriculture has degraded soil worldwide, creating nutrient-depleted food and cascading health crises. 
+                    But the same interconnection that created the problem becomes the solution—<strong>heal the soil, heal the system.</strong>
+</p>
+</div>
+</div>
+</section>
+<!-- SoilBridge Deep Section -->
+<section id="soilbridge" style="background: linear-gradient(to bottom, var(--white), var(--light-bg));">
+<div class="container">
+<div class="section-header">
+<h2 data-content="soilbridge_h2_1">SoilBridge Deep™</h2>
+<p data-content="soilbridge_subhead">Root-powered decompaction for no‑till systems—measured by penetrometer resistance.</p>
+</div>
+<div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start;">
+<div style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid var(--growth-green);">
+<h3 data-content="soilbridge_what_is_title" style="font-size: 1.8rem; color: var(--soil-dark); margin-bottom: 1rem;">What it is</h3>
+<p data-content="soilbridge_what_is_body" style="color: var(--soil-medium); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.25rem;">
+                        A microbial‑coated cover crop seed blend designed to create persistent vertical biopores that intersect the 12–18″ compaction zone—without mechanical disturbance.
+                    </p>
+<div style="padding: 1.5rem; background: var(--light-bg); border-radius: 10px; border-left: 4px solid var(--growth-green);">
+<p data-html="soilbridge_p_1" style="margin: 0; color: var(--soil-dark); line-height: 1.8;">
+<strong>Primary farmer‑verifiable outcome:</strong> <span data-content="soilbridge_primary_outcome">20–30% reduction in penetrometer resistance at 12–18″ depth (treatment vs. compacted control).</span>
+</p>
+<p data-html="soilbridge_p_2" style="margin: 0.75rem 0 0; color: var(--soil-medium); line-height: 1.7;">
+<strong>Claims discipline:</strong> structure‑only. No pesticidal, disease‑control, or guaranteed yield claims.
+                        </p>
+</div>
+<h4 data-content="soilbridge_h4_1" style="margin-top: 1.75rem; color: var(--soil-dark); font-size: 1.2rem;">How it works</h4>
+<ul style="margin-top: 0.75rem; color: var(--soil-medium); line-height: 1.8; padding-left: 1.25rem;">
+<li data-html="soilbridge_li_1"><strong>Mechanical (biological) action:</strong> deep‑rooting cover crops form channels that commonly reach 12–24″ under favorable conditions.</li>
+<li data-html="soilbridge_li_2"><strong>Biological amplification:</strong> seed coating with <strong>Trichoderma harzianum</strong> (~1×10⁶ CFU/seed) and <strong>Bacillus subtilis</strong> (~1×10⁷ CFU/seed).</li>
+<li data-html="soilbridge_li_3"><strong>Permanent soil infrastructure:</strong> after winter‑kill, decomposing roots leave biopores that subsequent cash crop roots follow.</li>
+</ul>
+</div>
+<div style="background: linear-gradient(135deg, var(--soil-dark), var(--soil-medium)); padding: 2.5rem; border-radius: 12px; color: var(--white); box-shadow: 0 10px 40px rgba(0,0,0,0.25);">
+<h3 data-content="soilbridge_h3_1" style="color: var(--white); font-size: 1.6rem; margin-bottom: 1rem;">Configuration (v1.1)</h3>
+<ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+<li data-html="soilbridge_li_4"><strong style="color: var(--vibrant-green);">Year 1:</strong> Core seed blend (15–20 lb/acre), seasonal shelf life (6–9 months).</li>
+<li data-html="soilbridge_li_5" style="margin-top: 0.75rem;"><strong style="color: var(--vibrant-green);">Year 2 (optional):</strong> Residue Accelerator add‑on (not required for core performance).</li>
+</ul>
+<div style="margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid rgba(255,255,255,0.15);">
+<h4 data-content="soilbridge_h4_2" style="color: var(--white); margin-bottom: 0.75rem;">Target users</h4>
+<p data-content="soilbridge_p_3" style="margin: 0; opacity: 0.9; line-height: 1.8;">
+                            Long‑term no‑till operators who already measure compaction (penetrometers), especially in heavy clay and silt loam contexts.
+                        </p>
+</div>
+<a class="btn btn-primary" data-content="soilbridge_a_1" href="#cta" style="margin-top: 2rem; display: inline-block;">Request the Field Handout</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Section -->
+<section id="product">
+<div class="container">
+<div class="section-header">
+<h2 data-content="product_h2_1">Technology Portfolio</h2>
+<p data-content="product_p_1">Commercial deployment (Genesis Column) + research platform (Genesis Toroid)</p>
+</div>
+<!-- Genesis Column (Deployment) -->
+<div class="product-showcase">
+<div class="product-image" style="padding: 0; background: none;">
+<img alt="Genesis Column field concept" src="genesis-column-field.jpg" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.25);"/>
+</div>
+<div class="product-details">
+<h3 data-content="product_h3_1">Genesis Column™</h3>
+<p data-content="product_p_2">
+                        A simplified, durable deployment device for delivering controlled acoustic stimulation—built for real‑world use,
+                        cost discipline, and manufacturing feasibility. Sensors are intentionally removed in v1 to reduce failure modes and
+                        keep the product accessible.
+                    </p>
+<ul class="specs-list">
+<li data-html="product_li_1"><strong>Primary Function</strong><span data-content="product_span_1">Acoustic stimulation (deployment)</span></li>
+<li data-html="product_li_2"><strong>Validation Priority</strong><span data-content="product_span_2">Lab → greenhouse → field protocols</span></li>
+<li data-html="product_li_3"><strong>Design Discipline</strong><span data-content="product_span_3">Simple, robust, manufacturable</span></li>
+<li data-html="product_li_4"><strong>Amendment (optional)</strong><span data-content="product_span_4">Universal Blend (v1.1)</span></li>
+</ul>
+<div style="margin-top: 1.5rem; padding: 1.5rem; background: var(--light-bg); border-radius: 10px; border-left: 4px solid var(--accent-gold);">
+<h4 data-content="product_h4_1" style="margin: 0 0 0.75rem; color: var(--soil-dark);">Universal Blend (v1.1)</h4>
+<p data-html="product_p_3" style="margin: 0; color: var(--soil-medium); line-height: 1.8;">
+<strong>50%</strong> mycorrhizal inoculant (AM + EM) · <strong>30%</strong> fine biochar ·
+                            <strong>20%</strong> dry humic/fulvic acids (dry for shelf stability). (Formulation locked pending viability/flow testing.)
+                        </p>
+</div>
+<a class="btn btn-primary" data-content="product_a_1" href="#cta" style="margin-top: 1.5rem;">Request Pilot Criteria</a>
+</div>
+</div>
+<!-- Genesis Toroid (Research) -->
+<div class="product-showcase" style="margin-top: 4rem;">
+<div class="product-image">
+<div class="product-placeholder">
+                        Genesis<br/>Toroid
+                    </div>
+</div>
+<div class="product-details">
+<h3 data-content="product_h3_2">Genesis Toroid™ (Research Track)</h3>
+<p data-content="product_p_4">
+                        A research platform exploring bidirectional measurement + stimulation: sensing micro‑volt/milli‑volt scale bioelectrical activity
+                        and testing adaptive acoustic protocols. This remains explicitly in the research/validation phase.
+                    </p>
+<ul class="specs-list">
+<li data-html="product_li_5"><strong>Status</strong><span data-content="product_span_5">Research &amp; validation</span></li>
+<li data-html="product_li_6"><strong>Primary Function</strong><span data-content="product_span_6">Measure ↔ stimulate ↔ learn</span></li>
+<li data-html="product_li_7"><strong>Claims Posture</strong><span data-content="product_span_7">Experimental, not commercial</span></li>
+<li data-html="product_li_8"><strong>Use Case</strong><span data-content="product_span_8">Controlled trials + instrumentation</span></li>
+</ul>
+<a class="btn btn-secondary" data-content="product_a_2" href="#cta" style="border-color: var(--growth-green); color: var(--growth-green);">Collaborate on Trials</a>
+</div>
+</div>
+<div style="margin-top: 4rem; padding: 2.5rem; background: var(--light-bg); border-radius: 8px;">
+<h3 data-content="product_h3_3" style="font-size: 2rem; color: var(--soil-dark); margin-bottom: 1.25rem;">Validation First</h3>
+<p data-html="product_p_5" style="color: var(--soil-medium); font-size: 1.05rem; line-height: 1.9; margin: 0;">
+                    Soil Genesis separates <strong>deployment technology</strong> from <strong>research instrumentation</strong>.
+                    We ship what we can validate, and we measure what we’re still learning—without claim drift.
+                </p>
+</div>
+</div>
+</section>
+<!-- Impact Section -->
+<section id="impact">
+<div class="container">
+<div class="section-header">
+<h2 data-content="impact_h2_1">Environmental Impact</h2>
+<p data-content="impact_p_1">Transforming agriculture through soil regeneration</p>
+</div>
+<div class="impact-grid">
+<div class="impact-item">
+<div class="impact-number">12–18″</div>
+<div class="impact-label">Target compaction zone (SoilBridge Deep)</div>
+</div>
+<div class="impact-item">
+<div class="impact-number">20–30%</div>
+<div class="impact-label">Penetrometer resistance reduction target</div>
+</div>
+<div class="impact-item">
+<div class="impact-number">Rigor</div>
+<div class="impact-label">Claims spine + measurable outcomes</div>
+</div>
+<div class="impact-item">
+<div class="impact-number">Scale</div>
+<div class="impact-label">Accessible tech for broad adoption</div>
+</div>
+</div>
+<div style="margin-top: 4rem; max-width: 900px; margin-left: auto; margin-right: auto; text-align: center;">
+<p data-html="impact_p_2" style="font-size: 1.15rem; line-height: 1.8; opacity: 0.9;">
+                    Our impact model is simple: improve soil structure and biological function with interventions that can be
+                    <strong>measured</strong>, <strong>replicated</strong>, and <strong>manufactured at scale</strong>.
+                    We prioritize farmer‑verifiable metrics over marketing claims.
+                </p>
+</div>
+<div style="margin-top: 3rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(74, 124, 89, 0.1) 0%, rgba(107, 158, 120, 0.1) 100%); border-radius: 12px; max-width: 900px; margin-left: auto; margin-right: auto;">
+<h3 data-content="impact_h3_1" style="color: var(--soil-dark); text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem;">Beyond Agriculture: Systemic Regeneration</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+<div>
+<h4 data-content="impact_h4_1" style="color: var(--growth-green); margin-bottom: 0.5rem;">🥗 Nutrition &amp; Health</h4>
+<p data-content="impact_p_3" style="color: var(--soil-medium); line-height: 1.7; font-size: 0.95rem;">
+                            Nutrient-dense food from healthy soil supports better immune function, cognitive performance, 
+                            and reduces chronic disease risk through the gut-brain axis connection.
+                        </p>
+</div>
+<div>
+<h4 data-content="impact_h4_2" style="color: var(--growth-green); margin-bottom: 0.5rem;">🏘️ Food Security</h4>
+<p data-content="impact_p_4" style="color: var(--soil-medium); line-height: 1.7; font-size: 0.95rem;">
+                            Local food production strengthens community resilience, reduces dependence on global supply chains, 
+                            and creates economic opportunities at the neighborhood level.
+                        </p>
+</div>
+<div>
+<h4 data-content="impact_h4_3" style="color: var(--growth-green); margin-bottom: 0.5rem;">🌍 Climate Action</h4>
+<p data-content="impact_p_5" style="color: var(--soil-medium); line-height: 1.7; font-size: 0.95rem;">
+                            Enhanced soil carbon sequestration, reduced need for synthetic fertilizers, 
+                            and restored water cycles create measurable climate mitigation benefits.
+                        </p>
+</div>
+<div>
+<h4 data-content="impact_h4_4" style="color: var(--growth-green); margin-bottom: 0.5rem;">🤝 Social Cohesion</h4>
+<p data-content="impact_p_6" style="color: var(--soil-medium); line-height: 1.7; font-size: 0.95rem;">
+                            Shared food production creates community bonds, intergenerational knowledge transfer, 
+                            and collective purpose around regeneration rather than extraction.
+                        </p>
+</div>
+</div>
+<p data-content="impact_p_7" style="margin-top: 2rem; text-align: center; color: var(--soil-dark); font-size: 1.1rem; font-weight: 600;">
+                    This is regenerative technology—healing systems, not just optimizing outputs.
+                </p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about">
+<div class="container">
+<div class="section-header">
+<h2 data-content="about_h2_1">About Soil Genesis DAO</h2>
+<p data-content="about_p_1">A Wyoming-registered decentralized autonomous organization</p>
+</div>
+<div class="about-content">
+<div class="about-text">
+<h3 data-content="about_h3_1">Our Mission</h3>
+<p data-html="about_p_2">
+                        Soil Genesis DAO LLC pioneers the intersection of acoustic technology, artificial intelligence, 
+                        and regenerative agriculture—but our mission extends far beyond agricultural innovation. 
+                        <strong>We're restoring the foundation of life itself.</strong>
+</p>
+<p data-content="about_p_3">
+                        When 95% of human nutrition comes from soil and 70% of terrestrial biodiversity depends on soil health, 
+                        restoring soil isn't just an environmental imperative—it's the starting point for healing entire systems. 
+                        Healthy soil creates healthy plants, which support healthy ecosystems, which nourish healthy people, 
+                        which build thriving communities. This cascade of regeneration is what drives us.
+                    </p>
+<p data-content="about_p_4">
+                        We develop products that amplify nature's own intelligence through precisely tuned acoustic and vibratory 
+                        signals that stimulate fungal networks. Our approach is grounded in peer-reviewed mechanotransduction research, 
+                        yet reaches toward a vision of planetary healing through biological restoration.
+                    </p>
+<p data-html="about_p_5">
+                        As a Wyoming-registered DAO, we combine traditional business structure with blockchain transparency, 
+                        ensuring accountability to stakeholders while maintaining the flexibility to innovate rapidly in this emerging field. 
+                        <strong>Where technology serves life, communities flourish.</strong>
+</p>
+</div>
+<div class="about-highlights">
+<h4 data-content="about_h4_1">Why Soil Genesis</h4>
+<div class="highlight-item">
+<div class="highlight-icon">1</div>
+<div class="highlight-text">
+<h5>Scientific Foundation</h5>
+<p data-content="about_p_6">Built on peer-reviewed research in plant bioacoustics and fungal mechanotransduction</p>
+</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">2</div>
+<div class="highlight-text">
+<h5>Practical Innovation</h5>
+<p data-content="about_p_7">Engineering solutions optimized for real-world agricultural deployment</p>
+</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">3</div>
+<div class="highlight-text">
+<h5>Transparent Governance</h5>
+<p data-content="about_p_8">DAO structure with publicly verifiable smart contract operations</p>
+</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">4</div>
+<div class="highlight-text">
+<h5>Market Opportunity</h5>
+<p data-content="about_p_9">Addressing the massive global need for sustainable soil restoration solutions</p>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 3rem; padding: 2rem; background: var(--light-bg); border-radius: 8px; text-align: center;">
+<p data-html="about_p_10" style="color: var(--soil-medium); font-size: 0.95rem; margin-bottom: 0.5rem;">
+<strong>Jurisdiction:</strong> Wyoming, United States | 
+                    <strong>Type:</strong> Decentralized Autonomous Organization LLC
+                </p>
+<p data-content="about_p_11" style="color: var(--soil-light); font-size: 0.9rem;">
+                    Publicly verifiable smart contract identifier available for business filings and investor due diligence
+                </p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section id="cta">
+<div class="container">
+<h2 data-content="cta_h2_1">Join the Awakening</h2>
+<p data-content="cta_p_1" style="font-size: 1.3rem; margin-bottom: 1rem;">
+                We're seeking partners who understand that the most profound innovations emerge when we learn 
+                to collaborate—with each other, with technology, and with nature itself.
+            </p>
+<p data-content="cta_p_2">
+                Strategic investors, regenerative agriculture advocates, and visionary collaborators: 
+                this is an invitation to participate in creating technology that serves life.
+            </p>
+<div class="cta-buttons">
+<a class="btn btn-white" data-content="cta_a_1" href="/cdn-cgi/l/email-protection#f0999e86958384b0839f999c97959e95839983de94919f">Request Investment Deck</a>
+<a class="btn btn-secondary" data-content="cta_a_2" href="/cdn-cgi/l/email-protection#7b0b1a090f151e090813120b083b081412171c1e151e081208551f1a14">Explore Partnership</a>
+<a class="btn btn-secondary" data-content="cta_a_3" href="/cdn-cgi/l/email-protection#8ce5e2eae3ccffe3e5e0ebe9e2e9ffe5ffa2e8ede3">General Inquiries</a>
+</div>
+<p data-html="cta_p_3" style="margin-top: 2.5rem; font-size: 1rem; opacity: 0.85; line-height: 1.6;">
+<strong>Current Stage:</strong> Early-stage funding opportunity<br/>
+<strong>Product Status:</strong> Generation 3 validated and ready for pilot deployments<br/>
+<strong>Seeking:</strong> Impact-aligned investors who value both returns and regeneration
+            </p>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<p data-content="global_p_3">© 2025 Soil Genesis DAO LLC. All rights reserved.</p>
+<p data-html="global_p_4" style="margin-top: 0.5rem;">
+                Wyoming-registered Decentralized Autonomous Organization | 
+                <a href="/cdn-cgi/l/email-protection#beddd1d0cadfddcafecdd1d7d2d9dbd0dbcdd7cd90dadfd1"><span class="__cf_email__" data-cfemail="36555958425755427645595f5a51535853455f4518525759" data-content="global_span_3">[email protected]</span></a>
+</p>
+</div>
+<p data-html="global_p_5" style="margin-top:0.75rem; font-size:0.85rem; opacity:0.7;">Content is loaded from <code>site-content.json</code> (optional). Design tokens/layout are locked.</p>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script></script></body></html>

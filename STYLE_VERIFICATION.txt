@@ -1,0 +1,22 @@
+SOIL GENESIS LIVE-STYLE REVISION V5
+
+This package was built from the uploaded current website index.html.
+The entire original CSS style block is preserved byte-for-byte.
+
+Original CSS SHA-256: d5a11e40872084d80353799128a8edf258182715a8d38541735060372f9a1b4a
+Revised CSS SHA-256:  d5a11e40872084d80353799128a8edf258182715a8d38541735060372f9a1b4a
+
+Verified current palette retained:
+- Soil dark: #2c1810
+- Soil medium: #5c3d2e
+- Growth green: #4a7c59
+- Vibrant green: #6b9e78
+- Light background: #f8f6f3
+- White: #ffffff
+
+Verified fonts retained:
+- Crimson Pro
+- Work Sans
+
+The revised copy is embedded directly in index.html as fallback and mirrored in site-content.json.
+Upload all three files to the repository root, replacing the existing files with the exact names.

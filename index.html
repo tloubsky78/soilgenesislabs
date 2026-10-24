@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="Soil Genesis reads how living soil is functioning and builds practical restoration systems around what the soil reveals." name="description"/><meta content="Soil Genesis | Living-Soil Intelligence and Restoration" property="og:title"/><meta content="Listening to what the soil has been trying to say." property="og:description"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Soil Genesis listens to living soil signals and develops research, instruments and restoration applications that serve land, life and human agency." name="description"/><meta content="Soil Genesis | Living-Soil Intelligence and Restoration" property="og:title"/><meta content="Listening to living soil. Developing useful science and technology for restoration and human agency." property="og:description"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Soil Genesis | Living-Soil Intelligence and Restoration</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -1230,12 +1230,59 @@
         html {
             scroll-behavior: smooth;
         }
-    </style>
+
+        /* Readability and access within the existing visual system. */
+        section { scroll-margin-top: 6rem; }
+        .hero-tagline, .hero h1 span { color: #c4dfca; }
+        .hero h1 [data-content="hero_title"] {
+            color: #fff; font-size: 1em; font-weight: 700; margin-top: 0;
+        }
+        .science-stat { font-size: 1.35rem; margin-bottom: 0.75rem; }
+        .science-card p { overflow-wrap: break-word; }
+        #cta { background: linear-gradient(135deg, #365d42, var(--growth-green)); }
+        #cta p { max-width: 820px; opacity: 1; }
+        a:focus-visible { outline: 3px solid var(--accent-gold); outline-offset: 5px; }
+        .skip-link { position: fixed; top: -5rem; left: 1rem; z-index: 2000;
+            background: #fff; color: var(--soil-dark); padding: 0.7rem 1rem; }
+        .skip-link:focus { top: 1rem; }
+        #cascade .cascade-step { display: flex; align-items: center; gap: 2rem;
+            padding: 2rem; background: white; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        #cascade .cascade-icon { font-size: 3rem; min-width: 80px; text-align: center; }
+        @media (max-width: 1100px) {
+            nav ul { gap: 1.2rem; }
+        }
+        @media (min-width: 769px) and (max-width: 968px) {
+            nav ul { display: flex; gap: 0.85rem; }
+            nav a { font-size: 0.8rem; }
+        }
+        @media (max-width: 768px) {
+            section { scroll-margin-top: 10rem; }
+            nav a { display: inline-block; padding: 0.3rem 0; }
+            nav ul { gap: 0.15rem 1rem; }
+            .hero { padding: 12rem 6% 4rem; }
+            .hero-cta { flex-direction: column; align-items: stretch; }
+            .hero h1 { font-size: clamp(2.2rem, 9vw, 3.4rem); }
+            .hero h1 span { font-size: 0.65em; }
+            .hero .scroll-indicator { display: none; }
+            .convergence-card, .science-card, .about-highlights { padding: 1.5rem; }
+            .science-grid { gap: 1.5rem; }
+            #cascade .cascade-step { align-items: flex-start; gap: 1rem; padding: 1.5rem; }
+            #cascade .cascade-icon { font-size: 2rem; min-width: 2rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .hero-tagline { opacity: 1; }
+        }
+
+</style>
 <script defer="" src="apply-content.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <!-- Navigation -->
-<nav>
+<nav aria-label="Main navigation">
 <div class="container">
 <div class="logo">Soil <span data-content="global_span_1">Genesis</span></div>
 <ul>
@@ -1251,11 +1298,12 @@
 </div>
 </nav>
 <!-- Hero Section -->
+<main id="main-content">
 <section class="hero">
 <div class="hero-content">
 <div class="hero-tagline" data-content="hero_tagline">Living-Soil Intelligence and Restoration</div>
 <h1 data-html="global_h1_1"><span data-content="hero_title">Reading the Signals. Revealing the Direction.</span><span data-content="global_span_2">Measure. Restore. Verify.</span></h1>
-<p data-content="hero_paragraph">Soil Genesis observes how living soil is functioning and investigates how to support its recovery - looking beyond what the soil contains to how it changes and responds over time.</p>
+<p data-content="hero_paragraph">Soil Genesis listens to living soil signals and develops research, instruments and restoration applications to support soil, vegetation, land function and human agency.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" data-content="global_a_1" href="#vision">See Our Vision</a>
 <a class="btn btn-secondary" data-content="global_a_2" href="#cta">Explore a Partnership</a>
@@ -1268,7 +1316,7 @@
 <div class="container">
 <div class="section-header">
 <h2 data-content="vision_h2_1">What Grows Above Depends on What Lives Below</h2>
-<p data-content="vision_p_1">The Foundation of Living Systems</p>
+<p data-content="vision_p_1">Restoring land and the capacity to act</p>
 </div>
 <div class="vision-content">
 <div class="vision-image-container">
@@ -1276,19 +1324,19 @@
 </div>
 <div class="vision-text">
 <h3 data-content="vision_h3_1">A Future Where Technology Serves Life</h3>
-<p data-content="vision_p_2" style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Soil health shapes most life on land, which makes soil a high leverage place to strengthen everything downstream - the plants that feed us and the communities they sustain.</p>
-<p data-content="vision_p_3" style="color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; line-height: 1.7;">Soil Genesis works toward that future by interpreting living function and supporting the structure and biology that allow soil to recover:</p>
+<p data-content="vision_p_2" style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Food sovereignty connects the health of land with the health and independence of people. It is a major initiative within our broader work to restore the conditions that allow living systems to flourish.</p>
+<p data-content="vision_p_3" style="color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; line-height: 1.7;">We work toward a future in which:</p>
 <ul class="vision-benefits">
-<li data-content="vision_li_1">Home gardeners produce abundant, healthy food</li>
-<li data-content="vision_li_2">Community gardens flourish with stronger local capacity</li>
-<li data-content="vision_li_3">Small farms gain a regenerative advantage</li>
-<li data-content="vision_li_4">Degraded lands return to productive life</li>
-<li data-content="vision_li_5">Local food security grows stronger</li>
+<li data-content="vision_li_1">People grow healthy food close to home</li>
+<li data-content="vision_li_2">Community gardens strengthen local capacity</li>
+<li data-content="vision_li_3">Growers build lasting relationships with their land</li>
+<li data-content="vision_li_4">Degraded landscapes regain living function</li>
+<li data-content="vision_li_5">Communities gain greater food sovereignty</li>
 </ul>
 </div>
 </div>
 <div class="vision-tagline">
-<p data-content="vision_p_4">Where technology serves the soil, communities thrive.</p>
+<p data-content="vision_p_4">Restoring the relationship between people, land and life.</p>
 </div>
 </div>
 </section>
@@ -1297,31 +1345,28 @@
 <div class="container">
 <div class="section-header">
 <h2 data-content="journey_h2_1">It Began as Listening</h2>
-<p data-content="journey_p_1">The insight beneath the platform</p>
+<p data-content="journey_p_1">Scientific inquiry, creative experience and reciprocal care</p>
 </div>
 <div class="journey-narrative">
 <p data-html="journey_p_2">We did not set out to build a product. We set out to <strong>listen</strong>.</p>
-<p data-html="journey_p_3">Soil is not an inert medium. It is a living system whose fungal, microbial, root, water, and mineral processes shape nutrient cycling, structure, resilience, and recovery. <strong>That living activity reveals how the system is functioning over time.</strong></p>
-<p data-content="journey_p_4">The platform begins from three practical observations:</p>
+<p data-html="journey_p_3">We regard microbes, fungi and plants as sentient participants in the living systems we learn from. Their responses, relationships and functions contribute to our work. <strong>Our reciprocal commitment is to restore supporting conditions, reduce harm and attend to how they respond.</strong></p>
+<p data-content="journey_p_4">Our work begins with attention:</p>
 </div>
 <div class="journey-paths">
 <div class="journey-path">
-<h4 data-content="journey_h4_1">Living Networks</h4>
-<p data-content="journey_p_5">Fungal, microbial, root, water, and mineral processes operate as one changing system.</p>
+<h4 data-content="journey_h4_1">Living Relationships</h4>
+<p data-content="journey_p_5">Fungi, microbes, roots, water and minerals form changing relationships. We study the system through those relationships.</p>
 </div>
 <div class="journey-path">
-<h4 data-content="journey_h4_2">Reading Function</h4>
-<p data-content="journey_p_6">Composition shows what is present. Function shows how the living system is behaving and changing.</p>
+<h4 data-content="journey_h4_2">Sound and Image</h4>
+<p data-content="journey_p_6">The Soil Signal Explorer translates measured living-soil signals into sound and image. Changes become perceptible alongside the data, offering another way to experience living systems.</p>
 </div>
 <div class="journey-path">
-<h4 data-content="journey_h4_4">Recovery Over Time</h4>
-<p data-content="journey_p_8">Response, stabilization, and recovery can reveal changes that a single static measurement may miss.</p>
+<h4 data-content="journey_h4_4">Time and Change</h4>
+<p data-content="journey_p_8">Continuous observation follows changes that a single visit or sample may miss. Sound and image are translations of those measurements.</p>
 </div>
 </div>
-<div class="journey-narrative" style="margin-top: 3rem;">
-<p data-html="journey_p_9">The goal is not to force a story onto soil. It is to build disciplined ways of observing what the living system reveals.</p>
-<p data-content="journey_p_10" style="font-size: 1.3rem; color: var(--vibrant-green); font-weight: 600; text-align: center; margin-top: 2rem;">What the soil reveals over time becomes the foundation for what we build next.</p>
-</div>
+
 </div>
 </section>
 <!-- AI Language Section -->
@@ -1330,47 +1375,43 @@
 <section id="why-us">
 <div class="container">
 <div class="why-us-intro">
-<h2 data-content="why-us_h2_1">An Integrated System for Reading, Restoring, and Verifying Living Soil</h2>
-<p data-content="why-us_p_1">Read the soil. Interpret its state. Restore structure and biology. Verify the change. Then read again, so every action teaches the next one.</p>
+<h2 data-content="why-us_h2_1">Read. Interpret. Restore. Verify.</h2>
+<p data-content="why-us_p_1">Our development follows a living loop. Each observation informs the work; each intervention becomes an opportunity to learn.</p>
 </div>
 <div class="convergence-grid">
 <div class="convergence-card">
 <h3 data-html="why-us_h3_1"><span class="convergence-icon">01</span> Read</h3>
-<p data-content="why-us_p_2">Observe how living soil is functioning, changing, and responding over time.</p>
+<p data-content="why-us_p_2">Record changing conditions in living soil over time.</p>
 </div>
 <div class="convergence-card">
 <h3 data-html="why-us_h3_2"><span class="convergence-icon">02</span> Interpret</h3>
-<p data-content="why-us_p_3">Turn what we observe into a bounded picture of system state.</p>
+<p data-content="why-us_p_3">Examine patterns alongside the conditions and independent measurements that give them meaning.</p>
 </div>
 <div class="convergence-card">
 <h3 data-html="why-us_h3_3"><span class="convergence-icon">03</span> Restore</h3>
-<p data-content="why-us_p_4">Support the structure and biology that allow soil to function.</p>
+<p data-content="why-us_p_4">Develop ways to support soil structure, biology and vegetation.</p>
 </div>
 <div class="convergence-card">
 <h3 data-html="why-us_h3_4"><span class="convergence-icon">04</span> Verify</h3>
-<p data-content="why-us_p_5">Measure whether the system changed, recovered, or held its new state.</p>
+<p data-content="why-us_p_5">Compare what changed with the starting conditions and relevant references.</p>
 </div>
 <div class="convergence-card">
 <h3 data-html="why-us_h3_5"><span class="convergence-icon">05</span> Read Again</h3>
-<p data-content="why-us_p_6">Use what the soil reveals to guide the next decision.</p>
+<p data-content="why-us_p_6">Let the response inform the next decision.</p>
 </div>
 <div class="convergence-card">
-<h3 data-html="why-us_h3_6"><span class="convergence-icon"Scientific Discipline</h3>
-<p data-content="why-us_p_7">At every stage, Soil Genesis separates measured evidence, interpretation, development targets, and what remains unvalidated.</p>
+<h3 data-html="why-us_h3_6"><span class="convergence-icon">06</span> Keep the Evidence</h3>
+<p data-content="why-us_p_7">Keep traceable measurements, thoughtful comparisons and clear accounts of what the work establishes.</p>
 </div>
 </div>
-<div class="why-us-cta">
-<h3 data-content="why-us_h3_7">A Living Feedback System</h3>
-<p data-content="why-us_p_8">The platform is designed so that observation, interpretation, restoration, delivery, and verification strengthen one another across the same living-soil system.</p>
-<p data-content="why-us_p_9" style="font-size: 1.3rem; font-weight: 600; margin-top: 1.5rem;">Read. Interpret. Restore. Verify. Read again.</p>
-</div>
+
 </div>
 </section>
 <!-- Inspirational Quote Section -->
 <section style="background: var(--soil-dark); padding: 4rem 5%; text-align: center;">
 <div class="container">
 <p data-html="global_p_1" style="font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--vibrant-green); font-family: 'Crimson Pro', serif; font-weight: 600; line-height: 1.4; max-width: 900px; margin: 0 auto;">“Soil is alive, and its life reveals its state.”</p>
-<p data-content="global_p_2" style="color: rgba(255,255,255,0.7); margin-top: 1.5rem; font-size: 1.1rem;">Reading function, not composition alone</p>
+<p data-content="global_p_2" style="color: rgba(255,255,255,0.7); margin-top: 1.5rem; font-size: 1.1rem;">Listening is the beginning of a relationship.</p>
 </div>
 </section>
 <!-- Science Section -->
@@ -1378,20 +1419,20 @@
 <div class="container">
 <div class="section-header">
 <h2 data-content="science_h2_1">Built Around the Living System Itself.</h2>
-<p data-content="science_p_1">Soil Genesis is being built around the way soil actually functions: as an interconnected living system. Its technologies work across reading, interpretation, restoration, delivery, and field-scale application, with each layer informing the others.</p>
+<p data-content="science_p_1">Sensing, interpretation and restoration development work together, from the soil beneath a garden to questions spanning landscapes.</p>
 </div>
 <div class="science-grid" style="margin-top: 3rem;">
 <div class="science-card">
-<h3 data-content="science_h3_4">Reading and Interpretation</h3>
-<p data-content="science_p_5">The Soil Signal Explorer (SSE) is an operating field research instrument developed and field-tested across multiple hardware generations to continuously observe changes in the bioelectrochemical conditions of living soil over time. Rather than replacing laboratory or biological measurements, SSE adds a continuous record of how the soil system changes between them. For carbon applications, soil carbon is measured in amounts, but the system moves in time. SSE is being developed to make that time visible while authoritative carbon measurements remain the anchor.</p>
+<h3 data-content="science_h3_4">Continuous Observation</h3>
+<p data-content="science_p_5">The Soil Signal Explorer (SSE) records changes in living soil's bioelectrochemical conditions. It adds continuous temporal context between laboratory, biological and ecological measurements. For carbon applications, authoritative carbon measurements remain the anchor.</p>
 </div>
 <div class="science-card">
-<h3 data-content="science_h3_5">Restoration and Delivery</h3>
-<p data-content="science_p_6">Tools for supporting structure and placing living biology where roots and fungi actually work.</p>
+<h3 data-content="science_h3_5">Restoration Applications</h3>
+<p data-content="science_p_6">Our research explores how to restore supporting conditions for soil, roots and fungi. Biological products and delivery tools are pathways within this wider development work.</p>
 </div>
 <div class="science-card">
-<h3 data-content="science_h3_6">Infrastructure and Remediation</h3>
-<p data-content="science_p_7">Extensions of the same observation, measurement, and restoration logic across land, contamination, and field scale.</p>
+<h3 data-content="science_h3_6">Land and Landscape</h3>
+<p data-content="science_p_7">We are developing applications for growers, restoration programs and landscape portfolios, connecting local observations with the questions that guide land stewardship.</p>
 </div>
 </div>
 </div>
@@ -1401,59 +1442,57 @@
 <div class="container">
 <div class="section-header">
 <h2 data-content="cascade_h2_1">The Cascade: From Soil to Flourishing</h2>
-<p data-content="cascade_p_1">When we restore soil, we can strengthen living systems downstream.</p>
+<p data-content="cascade_p_1">Restoration begins below ground and reaches into daily life.</p>
 </div>
 <div style="max-width: 900px; margin: 0 auto 3rem auto;">
-<p data-content="cascade_p_2" style="font-size: 1.2rem; line-height: 1.8; color: var(--soil-medium); text-align: center;">Soil Genesis works at the foundation of ecological cascades that move through ecosystems and communities.</p>
+<p data-content="cascade_p_2" style="font-size: 1.2rem; line-height: 1.8; color: var(--soil-medium); text-align: center;">Our purpose follows the relationships connecting soil, vegetation, ecosystems and communities.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 1000px; margin: 0 auto;">
-<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<div style="font-size: 3rem; min-width: 80px; text-align: center;">🌱</div>
+<div class="cascade-step">
+<div class="cascade-icon" aria-hidden="true">🌱</div>
 <div>
 <h3 data-content="cascade_h3_1" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy Soil</h3>
-<p data-html="cascade_p_3" style="color: var(--soil-medium); line-height: 1.7;">Living fungal and microbial networks support nutrient cycling, aggregation, water movement, and resilience. <strong>This is the foundation everything else rests on.</strong></p>
+<p data-html="cascade_p_3" style="color: var(--soil-medium); line-height: 1.7;">Fungi, microbes and roots contribute to nutrient cycling, aggregation, water movement and living soil structure.</p>
 </div>
 </div>
 <div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
-<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<div style="font-size: 3rem; min-width: 80px; text-align: center;">🌿</div>
+<div class="cascade-step">
+<div class="cascade-icon" aria-hidden="true">🌿</div>
 <div>
 <h3 data-content="cascade_h3_2" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy Plants</h3>
-<p data-html="cascade_p_4" style="color: var(--soil-medium); line-height: 1.7;">Healthier soil can support stronger roots, improved nutrient access, and crops that are better equipped to withstand stress.</p>
+<p data-html="cascade_p_4" style="color: var(--soil-medium); line-height: 1.7;">Living soil can support root development, nutrient access and the ability of vegetation to withstand stress.</p>
 </div>
 </div>
 <div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
-<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<div style="font-size: 3rem; min-width: 80px; text-align: center;">🌾</div>
+<div class="cascade-step">
+<div class="cascade-icon" aria-hidden="true">🌾</div>
 <div>
 <h3 data-content="cascade_h3_3" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy Ecosystems</h3>
-<p data-html="cascade_p_5" style="color: var(--soil-medium); line-height: 1.7;">Healthier plants support insects, pollinators, birds, and wildlife. Restore soil function, and you strengthen the web of life above it.</p>
+<p data-html="cascade_p_5" style="color: var(--soil-medium); line-height: 1.7;">Plants help sustain the insects, pollinators, birds and wildlife that share the land.</p>
 </div>
 </div>
 <div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
-<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<div style="font-size: 3rem; min-width: 80px; text-align: center;">👥</div>
+<div class="cascade-step">
+<div class="cascade-icon" aria-hidden="true">👥</div>
 <div>
 <h3 data-content="cascade_h3_4" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Healthy People</h3>
-<p data-html="cascade_p_6" style="color: var(--soil-medium); line-height: 1.7;">More resilient local food systems can support access to healthy food and reconnect people with the biological foundation of nourishment.</p>
+<p data-html="cascade_p_6" style="color: var(--soil-medium); line-height: 1.7;">Local food production can strengthen access to nourishment and people's relationship with the land.</p>
 </div>
 </div>
 <div style="font-size: 2rem; text-align: center; color: var(--vibrant-green);">↓</div>
-<div style="display: flex; align-items: center; gap: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-<div style="font-size: 3rem; min-width: 80px; text-align: center;">🏘️</div>
+<div class="cascade-step">
+<div class="cascade-icon" aria-hidden="true">🏘️</div>
 <div>
 <h3 data-content="cascade_h3_5" style="color: var(--soil-dark); margin-bottom: 0.5rem;">Thriving Communities</h3>
-<p data-html="cascade_p_7" style="color: var(--soil-medium); line-height: 1.7;">Stronger local food security, greater ecological resilience, and deeper community connection around shared food production.</p>
+<p data-html="cascade_p_7" style="color: var(--soil-medium); line-height: 1.7;">Food sovereignty builds the capacity to grow, decide and act together, with less dependence on outside support.</p>
 </div>
 </div>
 </div>
 <div style="margin-top: 4rem; padding: 2.5rem; background: var(--soil-dark); border-radius: 12px; text-align: center;">
-<p data-content="cascade_p_8" style="font-size: 1.4rem; color: var(--vibrant-green); font-weight: 600; margin-bottom: 1rem;">Restore the foundation, and the benefits can move through the whole system.</p>
-<p data-html="cascade_p_9" style="font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.8;">Ecologists describe cascades in which change at one level moves through the larger system. Soil restoration can become the beginning of a positive cascade - provided each downstream claim is tested at the level where it is made.</p>
+<p data-content="cascade_p_8" style="font-size: 1.4rem; color: var(--vibrant-green); font-weight: 600; margin-bottom: 1rem;">Restore supporting conditions. Strengthen the capacity for life.</p>
+<p data-html="cascade_p_9" style="font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.8;">We develop and test practical ways to support these relationships, so ecological restoration and human independence can grow together.</p>
 </div>
-<div style="margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.5); border-radius: 8px; border-left: 4px solid var(--growth-green);">
-<p data-html="cascade_p_10" style="font-size: 1.05rem; color: var(--soil-dark); line-height: 1.8; margin: 0;"><strong>The Soil Genesis position:</strong> begin at the foundation, measure honestly, and build restoration systems whose effects can be observed rather than assumed.</p>
-</div>
+
 </div>
 </section>
 <!-- Product Section -->
@@ -1461,38 +1500,26 @@
 <div class="container">
 <div class="section-header">
 <h2 data-content="solutions_h2">Soil Genesis Labs</h2>
-<p data-content="solutions_p">A business model designed to make the science durable and self-sustaining.</p>
+<p data-content="solutions_p">We are building a financially successful science, technology and development enterprise. Commercial strength sustains research, reliable delivery and wider access.</p>
 </div>
 <div class="science-grid">
 <div class="science-card">
-<div class="science-stat">Revenue</div>
-<h3 data-content="solutions_sb_title">Custom Biological Products</h3>
-<p data-content="solutions_sb_p">Season-long soil work to develop fungal and microbial inoculants matched to a grower's fields, beginning with specialty crops.</p>
-<ul class="feature-list">
-<li data-content="solutions_sb_b1">Field-specific biological development.</li>
-<li data-content="solutions_sb_b2">A service pathway that can generate revenue.</li>
-<li data-content="solutions_sb_b3">Real projects that create comparable evidence.</li>
-</ul>
+<div class="science-stat">Research</div>
+<h3 data-content="solutions_sb_title">Commissioned Research</h3>
+<p data-content="solutions_sb_p">Commission research and development around a useful question, with agreed comparisons, findings and deliverables. Development partnerships can connect that work to a field, restoration program or landscape portfolio.</p>
+
 </div>
 <div class="science-card">
-<div class="science-stat">Validation</div>
-<h3 data-content="solutions_gc_title">Research, Development, and Validation</h3>
-<p data-content="solutions_gc_p">Where Soil Genesis technologies are tested, refined, and validated under real conditions.</p>
-<ul class="feature-list">
-<li data-content="solutions_gc_b1">Controlled comparison before broad claims.</li>
-<li data-content="solutions_gc_b2">Engineering tied to field usability.</li>
-<li data-content="solutions_gc_b3">Evidence that strengthens the platform.</li>
-</ul>
+<div class="science-stat">Development</div>
+<h3 data-content="solutions_gc_title">Technology and Applications</h3>
+<p data-content="solutions_gc_p">Work with us toward useful instruments, restoration applications and program delivery. Deployments, data services and licensing can grow from agreed development work; custom biological products remain one pathway.</p>
+
 </div>
 <div class="science-card">
-<div class="science-stat">Compounding Asset</div>
+<div class="science-stat">Learning</div>
 <h3 data-content="solutions_ss_title">Soil-Intelligence Dataset</h3>
-<p data-content="solutions_ss_p">Signals paired with real outcomes, creating a proprietary dataset that sharpens the tools over time.</p>
-<ul class="feature-list">
-<li data-content="solutions_ss_b1">Observations linked to treatment and recovery.</li>
-<li data-content="solutions_ss_b2">Comparable records across projects and conditions.</li>
-<li data-content="solutions_ss_b3">A compounding asset built through actual work.</li>
-</ul>
+<p data-content="solutions_ss_p">Each well-documented project can connect measured responses with conditions and independent outcomes. This growing reference record is a compounding asset for research, interpretation and future applications.</p>
+
 </div>
 </div>
 </div>
@@ -1503,67 +1530,62 @@
 <div class="container">
 <div class="section-header">
 <h2 data-content="about_h2_1">Where It Stands</h2>
-<p data-content="about_p_1">The platform has moved from concept into active field operation.</p>
+<p data-content="about_p_1">An operating research instrument. A growing body of evidence.</p>
 </div>
 <div class="about-content">
 <div class="about-text">
-<h3 data-content="about_h3_1">Building with Evidence, Clarity, and Purpose</h3>
+<h3 data-content="about_h3_1">Built, Operated and Field-Tested</h3>
 <p data-html="about_p_2">Soil Genesis has developed, operated, and field-tested multiple generations of the Soil Signal Explorer.</p>
-<p data-content="about_p_4">The current SSE research platform is now supporting structured validation of continuous living-soil observation under controlled and field conditions.</p>
-<p data-html="about_p_5">The instrument is operating in the field while interpretation and the broader evidence base continue to mature.</p>
+<p data-content="about_p_4">Current research uses structured comparisons to investigate what measured responses reveal about living soil and how that knowledge can support useful applications.</p>
+<p data-html="about_p_5">The SSE is an operating research instrument. Interpretation and restoration applications remain under development.</p>
 </div>
 <div class="about-highlights">
-<h4 data-content="about_h4_1">Current Progress</h4>
+<h4 data-content="about_h4_1">The Work in Practice</h4>
 <div class="highlight-item">
 <div class="highlight-icon">1</div>
 <div class="highlight-text">
-<h5>Research and Development</h5>
-<p data-content="about_p_6">Multiple SSE generations built, operated, and field-tested; continued controlled and field validation underway.</p>
+<h5>Observe</h5>
+<p data-content="about_p_6">Continuous measurements of changing soil conditions.</p>
 </div>
 </div>
+
 <div class="highlight-item">
 <div class="highlight-icon">2</div>
 <div class="highlight-text">
-<h5>IP Strategy</h5>
-<p data-content="about_p_7">Full invention portfolio strategically reviewed with experienced patent counsel.</p>
+<h5>Experience</h5>
+<p data-content="about_p_8">Sound and image linked to the measurement record.</p>
 </div>
 </div>
 <div class="highlight-item">
 <div class="highlight-icon">3</div>
 <div class="highlight-text">
-<h5>Engineering</h5>
-<p data-content="about_p_8">The current Soil Signal Explorer research platform is operating in the field.</p>
-</div>
-</div>
-<div class="highlight-item">
-<div class="highlight-icon">4</div>
-<div class="highlight-text">
-<h5>Evidence</h5>
-<p data-content="about_p_9">Structured comparative evidence development underway.</p>
+<h5>Compare</h5>
+<p data-content="about_p_9">Comparative research with documented conditions and independent references.</p>
 </div>
 </div>
 </div>
 </div>
 <div style="margin-top: 3rem; padding: 2rem; background: var(--light-bg); border-radius: 8px; text-align: center;">
 <p data-html="about_p_10" style="color: var(--soil-medium); font-size: 0.95rem; margin-bottom: 0.5rem;"><strong>Company:</strong> Soil Genesis DAO LLC | <strong>Jurisdiction:</strong> Wyoming, United States</p>
-<p data-content="about_p_11" style="color: var(--soil-light); font-size: 0.9rem;">Living-soil intelligence and restoration platform - active field instrumentation with ongoing engineering and evidence development.</p>
+
 </div>
 </div>
 </section>
 <!-- CTA Section -->
 <section id="cta">
 <div class="container">
-<h2 data-content="cta_h2_1">Partner With Soil Genesis</h2>
-<p data-content="cta_p_1" style="font-size: 1.3rem; margin-bottom: 1rem;">We are seeking research, commercial, and capital partners who understand that durable restoration begins by reading the system, supporting what allows it to function, and verifying what changes.</p>
-<p data-content="cta_p_2">This is an invitation to help build the next layer of living-soil intelligence and practical restoration.</p>
+<h2 data-content="cta_h2_1">Useful Work, Shared Purpose</h2>
+<p data-content="cta_p_1" style="font-size: 1.3rem; margin-bottom: 1rem;">Commission research, explore a development partnership or support a restoration program. We welcome growers, community partners and institutions working across landscapes and portfolios.</p>
+<p data-content="cta_p_2">A steward finances agreed work. Soil Genesis contributes its instruments, research and delivery; the steward receives the agreed findings, technology or program. Investment participation and technology rights are negotiated separately. This allows growers and communities to benefit without their purchasing power determining the reach.</p>
 <div class="cta-buttons">
-<a class="btn btn-white" data-content="cta_a_1" href="mailto:contact@soilgenesislabs.com">Request Materials</a>
-<a class="btn btn-secondary" data-content="cta_a_2" href="mailto:contact@soilgenesislabs.com">Explore Partnership</a>
-<a class="btn btn-secondary" data-content="cta_a_3" href="mailto:contact@soilgenesislabs.com">General Inquiry</a>
+<a class="btn btn-white" data-content="cta_a_1" href="mailto:contact@soilgenesislabs.com">Explore a Partnership</a>
+
+
 </div>
-<p data-html="cta_p_3" style="margin-top: 2.5rem; font-size: 1rem; opacity: 0.85; line-height: 1.6;"><strong>Current Stage:</strong> Operating research platform with structured validation underway<br/><strong>Technology Status:</strong>Multiple SSE generations field-tested; current platform operating and under continued validation<br/><strong>Seeking:</strong> Aligned research, commercial, and capital partners</p>
+<p data-html="cta_p_3" style="margin-top: 2.5rem; font-size: 1rem; line-height: 1.6;"><strong>Begin with the question or place you care about, and the useful result you want to work toward.</strong></p>
 </div>
 </section>
+</main>
 <!-- Footer -->
 <footer>
 <div class="container">
